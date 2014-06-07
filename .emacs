@@ -1,0 +1,151 @@
+
+;; Enable line numbers in all files. 
+ (global-linum-mode 1)
+
+ ;; Enable IDO Mode
+ ;; Increases Interactivity and ease of use
+ ;; e.g. Autocomplete
+ (ido-mode 1)
+ (setq ido-enable-flex-matching t)
+ (setq ido-everywhere t)
+ 
+ ;; Hide splash screen & banner
+ (setq inhibit-startup-message t
+  inhibit-startup-echo-area-message t)  
+
+ ;; Enable auto-indenting
+ (define-key global-map (kbd "RET") 'newline-and-indent)
+
+ ;; Add new lines if using C-n at the end of the buffer
+ (setq next-line-add-newlines t)
+
+ ;; Use Zenburn Theme
+ ;; Theme must be stored in "~/.emacs.d/themes"
+ ;; Theme available @ wikemacs.org/wiki/Zenburn-theme
+ (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+ (load-theme 'zenburn t)
+
+ ;; Add Solarized Theme
+ (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized")
+  
+ ;; Robust iMenu with ido
+ ;; map iMenu to M-i
+ (global-set-key (kbd "M-i") 'ido-goto-symbol)
+
+ ;; Start with subword mode on
+ ;; easier navigation of camelCase
+ (load "subword.el")
+ (global-subword-mode 1)
+
+ ;; Turn on Visible Mark
+ (add-to-list 'load-path "~/.emacs.d/general-tools/")
+ (load "visible-mark.el")
+ ;; Load extra help commands
+ (load "help-fns+.el")
+
+ ;; Turn on Whitespace Mode
+ (require 'whitespace)
+ (setq whitespace-style '(face lines-tail))
+ (global-whitespace-mode t)
+
+ ;; Enable Smart Scan Mode
+ ;; Quickly search for identifier at current point
+ (load "smartscan.el")
+ (smartscan-mode 1)
+
+ ;; Disable GUI items
+ (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+ (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+ (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+
+ ;; Set up Melpa
+ ;; a package installer
+ (require 'package)
+  (add-to-list 'package-archives
+    '("melpa" . "http://melpa.milkbox.net/packages/") t)
+
+
+ ;;Store all backup files in C:/Temp
+ (setq backup-directory-alist
+   `((".*" . ,temporary-file-directory)))
+ (setq auto-save-file-name-transforms
+   `((".*" ,temporary-file-directory t)))
+(put 'set-goal-column 'disabled nil)
+
+ ;;Swap Windows & Frames quickly
+ (global-set-key (kbd "M-s M-s") 'other-window)
+ (global-set-key (kbd "M-s M-c") 'other-frame)
+
+ ;;Set up Web-Mode for syntax highlighting
+
+ (add-to-list 'load-path "~/.emacs.d/syntax-modes/")
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.[gj]sp\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.vtl\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.php\\'" . php-mode));; Set PHP-Mode for php files.
+
+
+ ;;Display tabs as 4 spaces.
+ (setq-default tab-width 4)
+    (defvaralias 'c-basic-offset 'tab-width)
+    (defvaralias 'cperl-indent-level 'tab-width)
+
+ ;;Next line moves to next ACTUAL line
+ ;;ignores word wrap
+ (setq line-move-visual 'nil)
+
+ (define-key minibuffer-local-map "\M-s" nil)
+
+ ;;Add autocomplete for coding
+ (add-to-list 'load-path "~/.emacs.d/general-tools/")
+ (require 'auto-complete-config)
+ (add-to-list 'ac-dictionary-directories "~/.emacs.d/general-tools//ac-dict")
+ (ac-config-default)
+
+ ;;Activate Windmove Keys
+ (when (fboundp 'windmove-default-keybindings)
+  (windmove-default-keybindings))
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ansi-color-names-vector ["#3F3F3F" "#CC9393" "#7F9F7F" "#F0DFAF" "#8CD0D3" "#DC8CC3" "#93E0E3" "#DCDCCC"])
+ '(ansi-term-color-vector [unspecified "#393939" "#f2777a" "#99cc99" "#ffcc66" "#6699cc" "#cc99cc" "#6699cc" "#e8e6df"])
+ '(background-color "#002b36")
+ '(background-mode dark)
+ '(cursor-color "#839496")
+ '(custom-safe-themes (quote ("769bb56fb9fd7e73459dcdbbfbae1f13e734cdde3cf82f06a067439568cdaa95" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "4eaad15465961fd26ef9eef3bee2f630a71d8a4b5b0a588dc851135302f69b16" "2b5aa66b7d5be41b18cc67f3286ae664134b95ccc4a86c9339c886dfd736132d" "ed81411169b1b3e3d4cfc39b09d68ea13e0ff7708dc5b9d0bedb319e071968ad" "51bea7765ddaee2aac2983fac8099ec7d62dff47b708aa3595ad29899e9e9e44" "978ff9496928cc94639cb1084004bf64235c5c7fb0cfbcc38a3871eb95fa88f6" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "17034e7e911c6dced02ff9ed23bae2967b94f2585a7c942afbfae936b9e40a61" "9bac44c2b4dfbb723906b8c491ec06801feb57aa60448d047dbfdbd1a8650897" "e53cc4144192bb4e4ed10a3fa3e7442cae4c3d231df8822f6c02f1220a0d259a" default)))
+ '(fci-rule-color "#383838")
+ '(foreground-color "#839496")
+ '(org-agenda-files (quote ("c:/pythonPractice/orgPractice/2.org" "c:/pythonPractice/orgPractice/1.org")))
+ '(vc-annotate-background "#2B2B2B")
+ '(vc-annotate-color-map (quote ((20 . "#BC8383") (40 . "#CC9393") (60 . "#DFAF8F") (80 . "#D0BF8F") (100 . "#E0CF9F") (120 . "#F0DFAF") (140 . "#5F7F5F") (160 . "#7F9F7F") (180 . "#8FB28F") (200 . "#9FC59F") (220 . "#AFD8AF") (240 . "#BFEBBF") (260 . "#93E0E3") (280 . "#6CA0A3") (300 . "#7CB8BB") (320 . "#8CD0D3") (340 . "#94BFF3") (360 . "#DC8CC3"))))
+ '(vc-annotate-very-old-color "#DC8CC3"))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+ ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ ;;;;;;;;;;;;;                              ORG MODE                           ;;;;;;;;;;;;;
+ ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ ;;SET UP ORG MODE
+ ;; (require org-mode)
+ (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
+ (global-set-key "\C-cl" 'org-store-link)
+ (global-set-key "\C-ca" 'org-agenda)
+
+ ;;Define Default Workflow States
+ (setq org-todo-keywords
+	   '((sequence "TODO" "WAITING" "DELEGATED" "DONE")))

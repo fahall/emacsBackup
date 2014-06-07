@@ -1,0 +1,40 @@
+var PRIME = ( function($, PRIME) {
+    var errorContainer = $('#errors');
+    var errorList = $('#error-list');
+
+    var initialize = function() {
+        $('form').submit( function( event ) {
+            var i;
+            var errors;
+            var li;
+            $('.hide-this').hide();
+            window.setTimeout("PRIME.spinner.spin()", 25);
+            errorList.html("");
+
+	    errors = PRIME.troubleValidation.validateDateOfBirth($('#dob-month').val(), $('#dob-day').val(), $('#dob-year').val());
+            errors = errors.concat(PRIME.troubleValidation.validateSSN($('#ssn')));  
+            if (errors && errors.length > 0) {
+		event.preventDefault();
+                errorList.html('');
+                for (i = 0; i < errors.length; i++) {
+                    li = $('<li/>').html(errors[i]);
+                    errorList.append(li);
+                }
+                errorContainer.show();
+                errorContainer.attr('aria-hidden', 'false');
+                window.setTimeout("PRIME.spinner.stop()", 25);
+                errorList.focus();
+                PRIME.util.scrollToLocation(errorContainer);
+            }
+        });
+        
+        PRIME.spinner.initialize();
+    };
+    
+    PRIME.enterUserInfo = {
+        initialize : initialize           
+    };
+    
+    return PRIME;
+
+}(jQuery, PRIME || {}));

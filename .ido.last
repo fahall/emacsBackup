@@ -1,0 +1,345 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("c:/Users/Shanalex/Dropbox/emacs-24.3/" . "HOME/")
+ ("c:/Users/Shanalex/Dropbox/" . "emacs-24.3/")
+ ("c:/Users/Shanalex/Documents/UWW 2nd Degree/DegreePlanner/" . "scheduleOptimizer/")
+ ("c:/Users/Shanalex/Documents/UWW 2nd Degree/" . "DegreePlanner/")
+ ("c:/Users/Shanalex/Documents/" . "UWW 2nd Degree/")
+ ("c:/Users/Shanalex/" . "Documents/")
+ ("c:/Users/All Users/" . "Documents/")
+ ("c:/Users/" . "Shanalex/")
+ ("c:/Buildworkspace/Projects/borrower-services-vtl/src/main/resources/borrower-services/templates/" . "message-center/")
+ ("c:/Buildworkspace/Projects/borrower-services-vtl/src/main/resources/borrower-services/" . "templates/")
+ ("c:/Buildworkspace/Projects/borrower-services-vtl/src/main/resources/" . "borrower-services/")
+ ("c:/Buildworkspace/Projects/borrower-services-vtl/src/main/" . "resources/")
+ ("c:/Buildworkspace/Projects/borrower-services-vtl/src/" . "main/")
+ ("c:/Buildworkspace/Projects/borrower-services-vtl/soundwave/src/main/resources/borrower-services/templates/" . "message-center/")
+ ("c:/Buildworkspace/Projects/borrower-services-vtl/soundwave/src/main/resources/borrower-services/" . "templates/")
+ ("c:/Buildworkspace/Projects/borrower-services-vtl/soundwave/src/main/resources/" . "borrower-services/")
+ ("c:/Buildworkspace/Projects/borrower-services-vtl/soundwave/src/main/" . "resources/")
+ ("c:/Buildworkspace/Projects/borrower-services-vtl/soundwave/src/" . "main/")
+ ("c:/Buildworkspace/Projects/borrower-services-vtl/soundwave/" . "src/")
+ ("c:/Buildworkspace/Projects/borrower-services-vtl/" . "src/")
+ ("c:/Buildworkspace/Projects/9942_R3/static/" . "stylesheets/")
+ ("c:/Buildworkspace/Projects/9942_R3/" . "static/")
+ ("c:/Buildworkspace/Projects/soundwave/src/main/resources/e-comm/templates/" . "message-center/")
+ ("c:/Buildworkspace/Projects/soundwave/src/main/resources/e-comm/" . "templates/")
+ ("c:/Buildworkspace/Projects/soundwave/src/main/resources/" . "e-comm/")
+ ("c:/Buildworkspace/Projects/soundwave/src/main/" . "resources/")
+ ("c:/Buildworkspace/Projects/soundwave/src/" . "main/")
+ ("c:/Buildworkspace/Projects/soundwave/" . "src/")
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/res/" . "_templates/")
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/java/org/mygreatlakes/borrower/payment/" . "service/")
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/java/org/mygreatlakes/borrower/snap/" . "model/")
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/java/org/mygreatlakes/borrower/login/snap/" . "controller/")
+ ("c:/pythonPractice/projects/ex47/" . "ex47/")
+ ("c:/pythonPractice/projects/skeleton/" . "tests/")
+ ("c:/pythonPractice/projects/" . "ex47/")
+ ("c:/pythonPractice/" . "orgPractice/")
+ ("c:/Buildworkspace/static/prime-app-server/" . "static/")
+ ("c:/Buildworkspace/static/" . "prime-app-server/")
+ ("c:/Buildworkspace/Projects/MGLStatic/MGLStaticWeb/src/main/java/org/mygreatlakes/" . "mglstatic/")
+ ("c:/Buildworkspace/Projects/MGLStatic/MGLStaticWeb/src/main/java/org/" . "mygreatlakes/")
+ ("c:/Buildworkspace/Projects/MGLStatic/MGLStaticWeb/src/main/java/" . "org/")
+ ("c:/Buildworkspace/Projects/MGLStatic/MGLStaticWeb/src/main/webapp/WEB-INF/classes/org/mygreatlakes/" . "mglstatic/")
+ ("c:/Buildworkspace/Projects/MGLStatic/MGLStaticWeb/src/main/webapp/WEB-INF/classes/org/" . "mygreatlakes/")
+ ("c:/Buildworkspace/Projects/MGLStatic/MGLStaticWeb/src/main/webapp/WEB-INF/classes/" . "org/")
+ ("c:/Buildworkspace/Projects/MGLStatic/MGLStaticWeb/src/main/webapp/WEB-INF/" . "classes/")
+ ("c:/Buildworkspace/Projects/MGLStatic/MGLStaticWeb/src/main/webapp/" . "WEB-INF/")
+ ("c:/Buildworkspace/Projects/MGLStatic/MGLStaticWeb/src/main/" . "java/")
+ ("c:/Buildworkspace/Projects/MGLStatic/MGLStaticWeb/src/" . "main/")
+ ("c:/Buildworkspace/Projects/MGLStatic/MGLStaticWeb/" . "src/")
+ ("c:/Buildworkspace/Projects/MGLStatic/" . "MGLStaticWeb/")
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/WEB-INF/tiles/login/" . "trouble/")
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/WEB-INF/tiles/" . "contactUs/")
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/js/login/" . "trouble/")
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/java/org/mygreatlakes/borrower/web/" . "validators/")
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/java/org/mygreatlakes/borrower/login/trouble/" . "controller/")
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/java/org/mygreatlakes/borrower/login/" . "snap/")
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/java/org/mygreatlakes/borrower/" . "contactus/")
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/java/org/mygreatlakes/" . "borrower/")
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/java/org/" . "mygreatlakes/")
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/java/" . "org/")
+ ("c:/emacs-24.3/HOME/" . ".emacs.d/")
+ ("c:/emacs-24.3/" . "HOME/")
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/js/" . "contactUs/")
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/WEB-INF/" . "tiles/")
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/" . "WEB-INF/")
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/" . "java/")
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/" . "main/")
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/" . "src/")
+ ("c:/Buildworkspace/Projects/MGL-Prime/" . "mgl-prime-web/")
+ ("c:/Buildworkspace/Projects/" . "MGL-Prime/")
+ ("c:/Buildworkspace/" . "Projects/")
+ ("c:/emacs-24.3/HOME/.emacs.d/" . "general-tools/")
+ ("c:/" . "Users/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "c:/Users/Shanalex/Documents/UWW 2nd Degree/DegreePlanner/scheduleOptimizer/"
+ "c:/Users/Shanalex/Dropbox/emacs-24.3/HOME/"
+ "c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/WEB-INF/tiles/contactUs/"
+ "c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/java/org/mygreatlakes/borrower/contactus/"
+ "c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/js/contactUs/"
+ "c:/pythonPractice/orgPractice/"
+ "c:/emacs-24.3/HOME/"
+ "c:/Buildworkspace/Projects/borrower-services-vtl/src/main/resources/borrower-services/templates/message-center/"
+ "c:/Buildworkspace/Projects/9942_R3/static/stylesheets/"
+ "c:/Buildworkspace/Projects/"
+ "c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/WEB-INF/tiles/registration/"
+ "c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/WEB-INF/tiles/profile/"
+ "c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/WEB-INF/tiles/include/"
+ "c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/java/org/mygreatlakes/borrower/payment/"
+ "c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/java/org/mygreatlakes/borrower/payment/service/"
+ "c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/java/org/mygreatlakes/borrower/payment/controller/"
+ "c:/emacs-24.3/HOME/.emacs.d/general-tools/"
+ "c:/emacs-24.3/HOME/.emacs.d/themes/"
+ "c:/emacs-24.3/HOME/.emacs.d/"
+ "c:/Buildworkspace/Projects/borrower-services-vtl/soundwave/src/main/resources/borrower-services/templates/message-center/"
+ "c:/Buildworkspace/Projects/soundwave/src/main/resources/e-comm/templates/message-center/"
+ "c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/js/"
+ "c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/res/_templates/"
+ "c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/java/org/mygreatlakes/borrower/snap/model/"
+ "c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/java/org/mygreatlakes/borrower/login/snap/controller/"
+ "c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/WEB-INF/tiles/login/"
+ "c:/pythonPractice/projects/ex47/tests/"
+ "c:/pythonPractice/projects/ex47/ex47/"
+ "c:/pythonPractice/projects/ex47/"
+ "c:/pythonPractice/projects/skeleton/tests/"
+ "c:/pythonPractice/projects/skeleton/NAME/"
+ "c:/pythonPractice/"
+ "c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/WEB-INF/tiles/login/trouble/"
+ "c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/js/login/trouble/"
+ "c:/emacs-24.3/bin/"
+ "c:/Buildworkspace/static/prime-app-server/static/"
+ "c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/WEB-INF/tiles/"
+ "c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/js/help/"
+ "c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/java/org/mygreatlakes/borrower/login/trouble/controller/"
+ "c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/java/org/mygreatlakes/borrower/login/trouble/"
+ "c:/emacs-24.3/HOME/.emacs.d/syntax-modes/"
+ "c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/java/org/mygreatlakes/borrower/web/validators/"
+ "c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/js/profile/"
+ "c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/js/login/"
+ "c:/Buildworkspace/Projects/MGL-Prime/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "TimeBlock.h"
+ "scheduleOptimizer.cpp"
+ "optimizerOutline.org"
+ ".emacs"
+ "scheduleOptimizer.php"
+ "sendPayment.jsp"
+ "home.jsp"
+ "nonserviced.jsp"
+ "complaintForm.jsp"
+ "ContactUsContext.java"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("c:/Users/Shanalex/Dropbox/emacs-24.3/HOME/" (21394 26510 0 0) "git/" ".smex-items" ".ido.last~" ".ido.last" ".emacs~" ".emacs.d/" ".emacs" "#deleteMe.html#" "../" "./")
+
+ ("c:/Users/Shanalex/Documents/UWW 2nd Degree/DegreePlanner/scheduleOptimizer/" (21394 26658 0 0) "scheduleOptimizer.php" "scheduleOptimizer.cpp" "optimizerOutline.org" "../" "./")
+
+ ("c:/Users/Shanalex/Documents/UWW 2nd Degree/DegreePlanner/" (21382 24310 0 0) "User_Stat/" "updateCourseForm.php" "updateCourse.php" "sortReq.php" "sortDept.php" "scheduleOptimizer/" "MissingCourses.xlsx" "GE Courses.xlsx" "CS Courses/" "courseReqScreenShot.jpg" "convertCourseID.php" "Chat/" "ajax_table.php" "ajax_req.php" "ajax_department.php" "addCourseForm.php" "addCourse.php" "../" "./")
+
+ ("c:/Users/Shanalex/Documents/UWW 2nd Degree/" (21315 21549 0 0) "TeachingAssistant/" "Stats/" "Shannon Rockin/" "ResearchAssist/" "putty.exe" "Org_Sys/" "Math 280/" "Letters/" "Hall_Req_2DicePig.pdf" "Hall_P4.pdf" "Hall_Missed_Punch.jpg" "FormBuilder/" "Financial/" "essay_section_1_question_2.txt" "essay_section_1_question_1.txt" "ENG_372/" "Ender_Hall_Hw6_Crypto.pdf" "Ender_Hall_Hw6_Crypto.docx" "edit_course.php" "DegreePlanner/" "CS_838/" "CS_559/" "CS_381/" "CS_271/" "CS577/" "cs222prog6/" "CS 482/" "CS 367/" "Class Schedule.png" "C++ P2/" "Big_Data_AI/" "AI/" "../" "./")
+
+ ("c:/Users/Shanalex/Documents/" (21375 63050 0 0) "YinnPresentation.pptx" "Writing/" "work/" "Wii Iso/" "Websites/" "WB Games/" "Visual Studio 2012/" "Visual Studio 2010/" "Visual Studio 2008/" "UWW 2nd Degree/" "TurboTax/" "Triggered/" "The Movies/" "The Lord of the Rings Online/" "Taxes/" "SPSSInc/" "SOME STRANGE FOLDER/" "Shrew Soft VPN/" "Shopping Lists/" "Shannon's Random/" "Shannon/" "Shan Books/" "Scanned Documents/" "Resumes/" "Registry Backups/" "Rainmeter/" "PTV NuStats/" "Programming/" "Plays/" "Placebo by SolMiler/" "PcSetup/" "Paulette Books/" "panther limited/" "Nexus Mod Manager/" "NetBeansProjects/" "NBGI/" "My Videos/" "My Pictures/" "My Music/" "My Kindle Content/" "My Games/" "My Cheat Tables/" "Moving/" "Mouse Configurations/" "Mom/" "MATLAB/" "LXL/" "Laptop - Shannon/" "Kindle Books/" "Jobs/" "Investments/" "Inventor Server x64 Direct Connect/" "Inventor Server x64 3dsMax/" "Insurance/" "Image.cue" "Image.bin" "House Hunting/" "Histories.iso" "Hall_Stats_Proj1.docx" "GitHub/" "Garmin/" "Games for Windows - LIVE Demos/" "Freemake/" "Fragments/" "Fitness/" "Feline Good/" "Fax/" "Ergo Indigo/" "Eidos/" "Education/" "eBooks/" "EA Games/" "DVDFab/" "dvd/" "Diablo III/" "desktop.ini" "Design Work/" "DarkSoulsArmorStats.csv" "darksouls-armor-stats-10.xlsx" "darksouls-armor-stats-10.csv" "CyberLink/" "CustomCreative/" "Comics/" "clips (1)/" "ChessBase/" "ChatLog Meet Now 2012_12_05 16_59.rtf" "Cats/" "Cars/" "Calibre Plugins/" "Calibre Library/" "Beyond Acting/" "Audible/" "ApartmentStuff.pdf" "ApartmentStuff.docx" "APA/" "AnyDVDHD/" "Amnesia/" "Amazon Downloader Logs/" "ajax" "Adobe/" "Acting/" "Academic Papers/" "3dsMax/" "../" "./")
+
+ ("c:/Users/All Users/" (21383 57889 0 0) "{D1D4879F-2279-49C9-AEBF-3B95C84EAA8F}/" "{93E26451-CD9A-43A5-A2FA-C42392EA4001}/" "{7E365CC2-534E-4C8D-B11C-02B771C3B82B}/" "YTD Video Downloader/" "WinZip/" "Windows App Certification Kit/" "vsosdk/" "VS/" "Ubisoft/" "Templates/" "Temp/" "Sun/" "Start Menu/" "SPSS/" "SlySoft/" "Skype/" "SafeNet Sentinel/" "Rosetta Stone/" "regid.1991-06.com.microsoft/" "regid.1986-12.com.adobe/" "realtech VR/" "Real/" "PreEmptive Solutions/" "PMB Files/" "Package Cache/" "PACE Anti-Piracy/" "Origin/" "Oracle/" "NVIDIA GPU Computing Toolkit/" "NVIDIA Corporation/" "NVIDIA/" "ntuser.pol" "NortonInstaller/" "Norton/" "Nero/" "Mozilla/" "MiserWare/" "MiKTeX/" "Microsoft.SqlServer.Compact.400.32.bc" "Microsoft.SqlServer.Compact.351.64.bc" "Microsoft OneDrive/" "Microsoft Help/" "Microsoft/" "MFAData/" "MediaMall/" "McAfee/" "Malwarebytes/" "LogMeIn/" "Lionhead Studios/" "LGMOBILEAX/" "IObit/" "Intuit/" "InstallShield/" "Garmin/" "Freemake/" "fltk.org/" "FLEXnet/" "Final Draft/" "Favorites/" "Electronic Arts/" "Elaborate Bytes/" "DSS/" "Documents/" "Desktop/" "DAEMON Tools Lite/" "CyberLink/" "Common Files/" "Citrix/" "Cisco/" "ChessBase/" "CanonBJ/" "Brother/" "boost_interprocess/" "Blizzard Entertainment/" "Battle.net/" "AVG2014/" "AVG/" "Autodesk/" "ATI/" "Application Data/" "Apple Computer/" "Apple/" "AMD/" "ALM/" "Adobe/" "34BE82C4-E596-4e99-A191-52C6199EBF69/" ".zreglib" ".811261211181235583101118113995" "../" "./")
+
+ ("c:/Users/" (21149 20779 0 0) "Shanalex/" "Public/" "desktop.ini" "Default User/" "Default/" "All Users/" "../" "./")
+
+ ("c:/Users/Shanalex/" (21369 363 0 0) "_viminfo" "weka.log" "VSWebCache/" "Videos/" "Templates/" "Start Menu/" "SendTo/" "Searches/" "Saved Games/" "Recent/" "PROGRAM1_attempt2.com.~asm" "PROGRAM1_attempt2.com.symbol" "PROGRAM1_attempt2.com.list" "PROGRAM1_attempt2.com.debug" "PROGRAM1_attempt2.com" "PrintHood/" "Pictures/" "OneDrive/" "ntuser.ini" "ntuser.dat{db4c6177-d71a-11e3-a127-00acf52da1cf}.TMContainer00000000000000000002.regtrans-ms" "ntuser.dat{db4c6177-d71a-11e3-a127-00acf52da1cf}.TMContainer00000000000000000001.regtrans-ms" "ntuser.dat{db4c6177-d71a-11e3-a127-00acf52da1cf}.TM.blf" "ntuser.dat{947f61c0-c26b-11e3-977e-00acf52da1cf}.TMContainer00000000000000000002.regtrans-ms" "ntuser.dat{947f61c0-c26b-11e3-977e-00acf52da1cf}.TMContainer00000000000000000001.regtrans-ms" "ntuser.dat{947f61c0-c26b-11e3-977e-00acf52da1cf}.TM.blf" "ntuser.dat{8dc2d80e-bf8f-11e3-aba8-00acf52da1cf}.TMContainer00000000000000000002.regtrans-ms" "ntuser.dat{8dc2d80e-bf8f-11e3-aba8-00acf52da1cf}.TMContainer00000000000000000001.regtrans-ms" "ntuser.dat{8dc2d80e-bf8f-11e3-aba8-00acf52da1cf}.TM.blf" "ntuser.dat{2ca902d1-c146-11e3-8354-00acf52da1cf}.TMContainer00000000000000000002.regtrans-ms" "ntuser.dat{2ca902d1-c146-11e3-8354-00acf52da1cf}.TMContainer00000000000000000001.regtrans-ms" "ntuser.dat{2ca902d1-c146-11e3-8354-00acf52da1cf}.TM.blf" "NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000002.regtrans-ms" "NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000001.regtrans-ms" "NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TM.blf" "ntuser.dat.LOG2" "ntuser.dat.LOG1" "ntuser.dat" "NetHood/" "My Documents/" "Music/" "Local Settings/" "Links/" "javaWorkspace/" "g2mdlhlpx.exe" "Favorites/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Cookies/" "Contacts/" "Calibre Library/" "Application Data/" "AppData/" "Adobe Flash Builder 4/" ".thumbnails/" ".ssh/" ".spss/" ".recently-used.xbel" ".nbi/" ".idlerc/" ".gitconfig" ".gimp-2.6/" ".gegl-0.0/" ".android/" "../" "./")
+
+ ("c:/Users/Shanalex/Dropbox/" (21392 59490 0 0) "Zelda Classic/" "SNES/" "javaWorkspace/" "Hall_PhysModel_Presentation.zip" "GradSchool/" "FormBuilder_Hall_Gleeson_Gabel_Rupprecht.zip" "eq___original_theme.m4r" "emacs-24.3/" "desktop.ini" "CS559-2014-02-12.zip" "CowboyShootTest.exe" "Chakram videos.zip" "CatTricks.f4v" "AsusRMA.png" "3D Math Primer for Graphics and Game Development (2nd Ed)(gnv64).pdf" ".dropbox.cache/" ".dropbox" "../" "./")
+
+ ("c:/Users/Shanalex/Dropbox/emacs-24.3/" (21392 61280 0 0) "site-lisp/" "README.W32" "README" "lisp/" "leim/" "info/" "HOME_BACKUP/" "HOME/" "etc/" "COPYING" "BUGS" "bin/" "../" "./")
+
+ ("c:/Users/Shanalex/Dropbox/emacs-24.3/bin/" (21346 58932 0 0) "runemacs.exe" "profile.exe" "movemail.exe" "libXpm.dll" "hexl.exe" "etags.exe" "emacsclientw.exe" "emacsclient.exe" "emacs.exe" "ebrowse.exe" "ddeclient.exe" "ctags.exe" "COPYING" "cmdproxy.exe" "addpm.exe" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/WEB-INF/tiles/contactUs/" (21384 46367 0 0) "sendPayment.jsp" "notLoggedInEmail.jsp" "nonserviced.jsp" "loggedInEmail.jsp" "letter.jsp" "home.jsp" "holidaySchedule.jsp" "getInTouch.jsp" "fileComplaint.jsp" "fax.jsp" "emailusTopics.jsp" "email.jsp" "dob.jsp" "complaintSuccess.jsp" "complaintForm.jsp" "call.jsp" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/java/org/mygreatlakes/borrower/contactus/" (21381 58970 0 0) "service/" "controller/" "ContactUsContext.java" "ComplaintForm.java" "ComplaintAccount.java" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/js/contactUs/" (21381 58970 0 0) "fileComplaint.js" "contactUs.js" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/" (21382 2990 0 0) "target/" "src/" "pom.xml" "findbugs-excludes.xml" "bin/" ".svn/" ".settings/" ".project" ".classpath" ".apt_generated/" "../" "./")
+
+ ("c:/pythonPractice/orgPractice/" (21383 21322 0 0) "OrgTutorial.org" "htmlExport1.html" "alex_organizer.org_archive" "alex_organizer.org" "2.org" "2.html" "1.org" "../" "./")
+
+ ("c:/emacs-24.3/HOME/" (21382 18603 0 0) "git/" ".smex-items" ".ido.last" ".emacs~" ".emacs.d/" ".emacs" "#deleteMe.html#" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/WEB-INF/tiles/login/trouble/" (21381 58970 0 0) "verifySsnDob.jsp" "verifySsn.jsp" "verifyPasswordPinPad.jsp" "verifyPasswordPin.jsp" "trouble.jsp" "resetPinPad.jsp" "resetPin.jsp" "resetPassword.jsp" "newPinPasswordPinPad.jsp" "newPinPassword.jsp" "includes/" "enterUserInfo.jsp" "emailSent.jsp" "contactUs.jsp" "confirmUserInformation.jsp" "accountResetExpired.jsp" "accountNotFound.jsp" ".svn/" "../" "./")
+
+ ("c:/pythonPractice/" (21380 61405 0 0) "test.txt" "projects/" "orgPractice/" "new_file.txt" "ex9.py" "ex8.py" "ex7.py" "ex6.py" "ex5.py" "ex43.py" "ex42.py" "ex40.py" "ex4.py" "ex39.py" "ex3.py" "ex24.py" "ex21.py" "ex20.py" "ex2.py" "ex19.py" "ex18.py" "ex17_test.txt" "ex17.py" "ex16_sample.txt" "ex16.py" "ex15_sample.txt" "ex15.py" "ex14.py" "ex13.py" "ex12.py" "ex11.py" "ex10.py" "ex1.py~" "ex1.py" "distribute_setup.py" "distribute-0.6.49.tar.gz" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/java/org/mygreatlakes/borrower/login/snap/controller/" (21381 58970 0 0) "UserIdController.java" "SecurityPinController.java" "LoginDestinationCustomizingData.java" "LoginController.java" "ImageAndPasswordController.java" "ExtraValidationController.java" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/WEB-INF/tiles/include/" (21381 58969 0 0) "webtrendsBase.jsp" "timeout.jsp" "headerResources.jsp" "header.jsp" "footer.jsp" "blank.jsp" "aside.jsp" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/WEB-INF/tiles/registration/" (21381 58969 0 0) "thirdForm.jsp" "selectImage.jsp" "reviewAccountInfo.jsp" "pinPadPage.jsp" "loginInfo.jsp" "identify.jsp" "emailPreferences.jsp" "demoReview.jsp" "createPin.jsp" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/9942_R3/static/stylesheets/" (21381 59013 0 0) "wizard.css" "webkit.css" "webcasts.css" "webcast-app.css" "unaryLayout.css" "terms.css" "summary.css" "statements.css" "slider-elastislide.css" "slider-bjqs.css" "sideNav.css" "reset.css" "repayment.css" "printpaymentschedule.css" "printDetails.css" "printAutoPay.css" "print.css" "popup.css" "payments_ie.css" "paymentschedule.css" "payments.css" "paymenthistory.css" "paymentduedate.css" "paychecks.css" "NewtoGL_infographic.css" "nav.css" "messages.css" "messagecenter_print.css" "message-center.css" "marketingcontent.css" "knowledgecenter.css" "kcIE8.css" "kc2013.css" "jq-datepicker-override.css" "job-hunting.css" "internal.css" "inhousedefaultedloans.css" "infographic_ie8.css" "ie6.css" "home.css" "grid.css" "glSelect.css" "forms.css" "forbCalcExpansion.css" "footer.css" "first_gig.css" "first-time.css" "enrollmentWizard.css" "dropcapicons.css" "drawer.css" "details.css" "demo_login.css" "demographics.css" "defaultRehab.css" "credit.css" "contactTabs.css" "contact-us.css" "consolIE8.css" "consolidation.css" "chat.css" "calculators.css" "buttons.css" "bst.css" "borrowerDirection.css" "borrower.css" "authentication.css" "articleVideos.css" "accountAccess.css" "account.css" "accordion.css" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/borrower-services-vtl/src/main/resources/borrower-services/templates/message-center/" (21380 55932 0 0) "Unsuccessful_Payment.vtl" "SCRA_Notification.vtl" "Payment_History.vtl" "ICR_Forbearance_Approval.vtl" "Forbearance_Followup.vtl" "Forbearance_Approval.vtl" "Deferment_Approval.vtl" "BOS_Request.vtl" "BOS_Error_Notification.vtl" "BAL_Request.vtl" "Auto_Pay_Confirmation.vtl" "1098E_Ready_Notification.vtl" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/borrower-services-vtl/src/main/resources/borrower-services/templates/" (21380 55933 0 0) "_global-variables/" "text-message/" "system-processing/" "system-output/" "message-center/" "mc-pickup/" "macros/" "layouts/" "email-non-letter/" "email-letter-conversion/" "config/" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/borrower-services-vtl/src/main/resources/borrower-services/" (21380 55933 0 0) "templates/" "skeletons/" "developer-documentation/" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/borrower-services-vtl/src/main/resources/" (21380 55932 0 0) "borrower-services/" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/borrower-services-vtl/src/main/" (21380 55933 0 0) "resources/" "java/" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/borrower-services-vtl/src/" (21380 55932 0 0) "test/" "main/" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/borrower-services-vtl/" (21380 56690 0 0) "target/" "src/" "regression-ant.xml" "pom.xml" "mvn.out" "build.xml" "bin/" "bdx.xml" "archive/" "ant.log" "ant-bdx.xml" ".svn/" ".settings/" ".project" ".factorypath" ".classpath" ".apt_generated/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/js/" (21375 36921 0 0) "utils.js" "timeout.js" "spinner.js" "search.js" "registration/" "psdStatement.js" "profile/" "popup.js" "payments/" "paymentHistory.js" "overlays.js" "menu.js" "login/" "kc/" "jquery.mask.min.js" "help/" "guardian.js" "contactUs/" "common.js" "breadcrumbs.js" "accounts/" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/" (21380 55910 0 0) "ns-regression/" "MGLStatic/" "MGL-Prime/" "ecomm-vtl/" "Dashboard/" "borrower-services-vtl/" "alex_style_testBed.css" "Alex_Style_Notes.txt" "9942_R3/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/WEB-INF/tiles/profile/" (21363 48622 0 0) "text/" "preferences.jsp" "pinPadPage.jsp" "pin.jsp" "password.jsp" "onlineAccess.jsp" "include/" "image.jsp" "home.jsp" "firstName.jsp" "email.jsp" "demographics.jsp" "contact.jsp" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/WEB-INF/tiles/login/" (21374 20949 0 0) "trouble/" "thirdForm.jsp" "securityPin.jsp" "maximumAttempts.jsp" "loginBox.jsp" "imageAndPassword.jsp" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/java/org/mygreatlakes/borrower/payment/service/" (21371 38924 0 0) "PayonlineServiceImpl.java" "PayonlineService.java" "PaymentValidator.java" "PaymentServiceImpl.java" "PaymentService.java" "PaymentHubServiceImpl.java" "PaymentHubService.java" "PaymentHistoryServiceImpl.java" "PaymentHistoryService.java" "FinancialServiceImpl.java" "FinancialService.java" "ChangeDueDateService.java" ".svn/" "../" "./")
+
+ ("c:/emacs-24.3/HOME/.emacs.d/general-tools/" (21374 1586 0 0) "visible-mark.el" "smartscan.el" "popup.elc" "popup.el" "help-fns+.el" "fuzzy.elc" "fuzzy.el" "doremi.el" "auto-complete.elc" "auto-complete.el" "auto-complete-config.elc" "auto-complete-config.el" "auto-complete-1.3.1/" "ac-dict/" "../" "./")
+
+ ("c:/emacs-24.3/" (21373 7180 0 0) "site-lisp/" "README.W32" "README" "lisp/" "leim/" "info/" "HOME.zip" "HOME/" "etc/" "COPYING" "BUGS" "bin/" "../" "./")
+
+ ("c:/emacs-24.3/HOME/.emacs.d/themes/" (21373 6794 0 0) "zenburn-theme.el" "emacs-color-theme-solarized/" "base16-tomorrow-theme.el" "base16-ocean-theme.el" "base16-eighties-theme.el" "base16-default-theme.el" "base16-chalk-theme.el" "../" "./")
+
+ ("c:/emacs-24.3/HOME/.emacs.d/" (21373 2498 0 0) "themes/" "syntax-modes/" "general-tools/" "elpa/" "COPYING" "auto-save-list/" "ac-comphist.dat" "%backup%~" "../" "./")
+
+ ("c:/Buildworkspace/Projects/borrower-services-vtl/soundwave/src/main/resources/borrower-services/templates/message-center/" (21372 46335 0 0) "Unsuccessful_Payment.vtl" "SCRA_Notification.vtl" "Payment_History.vtl" "ICR_Forbearance_Approval.vtl" "Forbearance_Followup.vtl" "Forbearance_Approval.vtl" "Deferment_Approval.vtl" "BOS_Request.vtl" "BOS_Error_Notification.vtl" "BAL_Request.vtl" "Auto_Pay_Confirmation.vtl" "1098E_Ready_Notification.vtl" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/borrower-services-vtl/soundwave/src/main/resources/borrower-services/templates/" (21372 46335 0 0) "_global-variables/" "text-message/" "system-processing/" "system-output/" "message-center/" "mc-pickup/" "macros/" "layouts/" "email-non-letter/" "email-letter-conversion/" "config/" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/borrower-services-vtl/soundwave/src/main/resources/borrower-services/" (21372 46335 0 0) "templates/" "skeletons/" "developer-documentation/" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/borrower-services-vtl/soundwave/src/main/resources/" (21372 46334 0 0) "borrower-services/" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/borrower-services-vtl/soundwave/src/main/" (21372 46335 0 0) "resources/" "java/" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/borrower-services-vtl/soundwave/src/" (21372 46334 0 0) "test/" "main/" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/borrower-services-vtl/soundwave/" (21372 46335 0 0) "src/" "pom.xml" "mvn.out" "build.xml" "bdx.xml" "archive/" "ant-bdx.xml" ".svn/" ".settings/" ".project" ".factorypath" ".classpath" "../" "./")
+
+ ("c:/Buildworkspace/Projects/9942_R3/static/" (21371 46296 0 0) "wizard/" "understandOptions.html" "troubleMakingPayments.html" "tlf/" "thank_you.html" "terms_of_use.html" "tech_faq_borrower.html" "teacher_loan_forgive.html" "stylesheets/" "statements/" "Sitemap.xml" "sign_up_for_emails.html" "sideNavs/" "robots.txt" "PSDs/" "problems_accessing.html" "postponePayments.html" "postpone/" "popup/" "pfm_finaid_3.html" "payoffAmount.html" "payment_estimator.html" "paymentOptions.html" "pay/" "page/" "options/" "nameChangeNonGl.html" "nameChangeNoDemo.html" "nameChangeBoth.html" "nameChange.html" "mobileweb/" "mobile/" "marketing/" "makePayment.html" "lowerPayments.html" "lower/" "logout.html" "login/" "knowOptions.html" "knowledgecenter/" "js/" "inschool_consolidation.html" "income/" "images/" "ibr_calculator.html" "homePage-Marketing.html" "help/" "glossary/" "forms/" "forgiveness.html" "forbearance/" "flash_detection.swf" "firsttimehere_popup.html" "firsttimehere.html" "First Time Here.swf" "fiq/" "fancybox/" "failedAuthentication.html" "facebookChannelUrl.html" "error_404.html" "email_us.html" "doesforyou.html" "deferment_faqs.html" "default_tracking.html" "copyright_notice.html" "content/" "consol/" "config/" "changeduedate.html" "calculators.html" "borrowerfeature.swf" "blocked_account_info.html" "authentication/" "AC_RunActiveContent.js" "aboutgl.html" "1stgig/" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/9942_R3/" (21371 46296 0 0) "zip.xml" "static/" "pom.xml" "bdx-deployment-glws7uatb.xml" "bdx-deployment-glws7uat.xml" "bdx-deployment-glws7intb.xml" "bdx-deployment-glws7int.xml" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/java/org/mygreatlakes/borrower/login/trouble/controller/" (21371 38924 0 0) "VerifySsnDobController.java" "VerifySsnController.java" "VerifyPasswordPinController.java" "TroubleLandingPageController.java" "TroubleGeneralController.java" "ResetPinController.java" "ResetPasswordController.java" "NewPinAndPasswordController.java" "EnterUserInfoController.java" "EmailSentController.java" "ConfirmUserInformationController.java" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/java/org/mygreatlakes/borrower/payment/controller/" (21371 41292 0 0) "UsBankTransferController.java" "ReviewController.java" "RecentDisbursementController.java" "PayoffAmountController.java" "PaymentSelectionController.java" "PaymentMethodController.java" "PaymentHubController.java" "PaymentHistoryController.java" "NonServicedAccountDetailsPopulator.java" "ManagePaymentsController.java" "ConfirmationController.java" "BankAccountModel.java" "BankAccountController.java" "AdditionalPaymentController.java" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/soundwave/src/main/resources/e-comm/templates/message-center/" (21371 44013 0 0) "Unemployment_Deferment_Online.vtl" "POD_Account_Name_Notification.vtl" "Pay_Online_Payment_Confirmation.vtl" "Pay_Online_Cancellation_Confirmation.vtl" "KYO_Repayment_Plan_Change.vtl" "KYO_Forbearance_Request.vtl" "Due_Date_Change_Confirmation.vtl" "Default_Rehab_Payment.vtl" "Default_Rehab_Agreement_Confirmation.vtl" "Auto_Pay_Modification_Confirmation.vtl" "Auto_Pay_Enrollment_Confirmation.vtl" "Auto_Pay_Deactivation_Confirmation.vtl" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/soundwave/src/main/resources/e-comm/templates/" (21371 44013 0 0) "_global-variables/" "system-processing/" "system-output/" "message-center/" "macros/" "layouts/" "email/" "config/" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/soundwave/src/main/resources/e-comm/" (21371 44013 0 0) "templates/" "skeletons/" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/soundwave/src/main/resources/" (21371 44011 0 0) "e-comm/" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/soundwave/src/main/" (21371 44011 0 0) "resources/" "java/" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/soundwave/src/" (21371 44011 0 0) "test/" "main/" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/soundwave/" (21371 44098 0 0) "target/" "src/" "pom.xml" "ecomm-vtl-2.0.5-e-comm-templates.xml" "build.xml" "bdx.xml" "archive/" "ant-bdx.xml" ".svn/" ".settings/" ".project" ".classpath" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/res/_templates/" (21363 48624 0 0) "registrationSchools.html" "registrationLoginImages.html" "psdTermsAndConditions.html" "psdRepaymentTerms.html" "psdRelatedToYourPayment.html" "psdReasonText.html" "psdPrintRepaymentPlanOptions.html" "psdPrintAccountInfoWaysToPay.html" "psdAmountLoansIncentives.html" "psdAccountInformation.html" "paymentHistory.html" "knowledgeCenterHome.html" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/res/" (21363 48624 0 0) "_templates/" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/java/org/mygreatlakes/borrower/payment/" (21363 48630 0 0) "UnprocessedPayments.java" "service/" "ScheduledPaymentDate.java" "ScheduledPayment.java" "PayoffAmountModel.java" "PaymentViewResponse.java" "PaymentTransaction.java" "PaymentSummary.java" "PaymentSelection.java" "PaymentMethod.java" "PaymentHub.java" "PaymentHistoryTransaction.java" "PaymentHistoryDate.java" "PaymentHistoryAccount.java" "PaymentHistory.java" "PaymentErrorMessage.java" "PaymentDate.java" "PaymentAccount.java" "Payment.java" "error/" "duedate/" "controller/" "BankAccountViewResponse.java" "BankAccountSubmission.java" "AutoPayPaymentDate.java" "autopay/" ".svn/" "../" "./")
+
+ ("c:/pythonPractice/projects/ex47/ex47/" (21366 21353 0 0) "__init__.pyc" "__init__.py" "parser.pyc" "parser.py" "lexicon.pyc" "lexicon.py" "game.pyc" "game.py" "../" "./")
+
+ ("c:/pythonPractice/projects/ex47/tests/" (21366 22353 0 0) "__init__.pyc" "__init__.py" "parser_tests.pyc" "parser_tests.py" "lexicon_tests.pyc" "lexicon_tests.py" "ex47_tests.pyc" "ex47_tests.py" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/java/org/mygreatlakes/borrower/snap/model/" (21363 48625 0 0) "SnapLogin.java" "SecurityPinModel.java" "ExtraValidationModel.java" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/java/org/mygreatlakes/borrower/snap/" (21363 48625 0 0) "SnapLoginContext.java" "SnapErrorHandlerImpl.java" "SnapErrorHandler.java" "model/" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/java/org/mygreatlakes/borrower/login/snap/" (21363 48628 0 0) "service/" "controller/" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/java/org/mygreatlakes/borrower/login/" (21363 48628 0 0) "trouble/" "snap/" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/java/org/mygreatlakes/borrower/" (21363 48633 0 0) "web/" "util/" "transfer/" "statement/" "snap/" "smartcontent/" "servlet/" "security/" "search/" "registration/" "profile/" "predicate/" "persistence/" "payment/" "notification/" "messagecenter/" "login/" "knowledgecenter/" "intereststatement/" "institutiongrouping/" "functional/" "exception/" "ehcache/" "contactus/" "compare/" "common/" "breakers/" "Borrower.java" "account/" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/java/org/mygreatlakes/" (21363 48624 0 0) "borrower/" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/java/org/" (21363 48624 0 0) "mygreatlakes/" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/java/" (21363 48624 0 0) "org/" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/WEB-INF/" (21363 49038 0 0) "web.xml" "tld/" "tiles/" "lib/" "ibm-web-ext.xml" "ibm-web-bnd.xml" "classes/" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/" (21363 48624 0 0) "WEB-INF/" "res/" "META-INF/" "js/" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/js/login/" (21363 48621 0 0) "trouble/" "login.js" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/js/profile/" (21363 48620 0 0) "updateAuthData.js" "textAlerts.js" "pinPad.js" "emailPreferences.js" "demographics.js" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/java/org/mygreatlakes/borrower/web/validators/" (21363 48631 0 0) "ValidStaticContentPageInclude.java" "ThirdFactorNotEmptyValidator.java" "PinsMatchValidator.java" "PhoneNumberRequiredWithExtensionValidator.java" "PhoneNumberRequiredValidator.java" "PayoffDateValidator.java" "PasswordsMatchValidator.java" "ElectronicConsentValidator.java" "AddressLinesNotBlankValidator.java" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/java/org/mygreatlakes/borrower/login/trouble/" (21363 48628 0 0) "VerifySsnForm.java" "VerifySsnDobForm.java" "VerifyPasswordPinForm.java" "UserInfoForm.java" "ThirdFactorForm.java" "SnapEmailToken.java" "service/" "ResetPinForm.java" "ResetPasswordForm.java" "NewPinPasswordForm.java" "LoginTroubleForm.java" "DateOfBirth.java" "controller/" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/js/help/" (21363 48620 0 0) "faq.js" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/WEB-INF/tiles/" (21363 48624 0 0) "templates.xml" "techHelp.jsp" "statement/" "siteTransfer/" "siteSearch/" "registration/" "profile/" "payments/" "login/" "layouts/" "knowledgeCenter/" "include/" "help.jsp" "exception.jsp" "exception/" "etransfer/" "emailVerification.jsp" "developmentLogin.jsp" "content.jsp" "content-no-menu.jsp" "contactUs/" "common/" "accounts/" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/js/login/trouble/" (21363 48621 0 0) "verifySsnDob.js" "verifySsn.js" "verifyPasswordPin.js" "validation.js" "troubleLandingPage.js" "resetPin.js" "resetPassword.js" "pinPad.js" "newPinPassword.js" "enterUserInfo.js" "confirmUserInformation.js" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/" (21363 48633 0 0) "webapp/" "resources/" "java/" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/" (21363 48633 0 0) "test/" "main/" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGL-Prime/" (21363 48636 0 0) "pom.xml" "mgl-prime-web/" "mgl-prime/" ".svn/" "../" "./")
+
+ ("c:/pythonPractice/projects/ex47/" (21362 14746 0 0) "tests/" "setup.py" "ex47/" "docs/" "bin/" "../" "./")
+
+ ("c:/pythonPractice/projects/skeleton/NAME/" (21362 12553 0 0) "__init__.pyc" "__init__.py" "../" "./")
+
+ ("c:/pythonPractice/projects/ex47/bin/" (21362 10897 0 0) "../" "./")
+
+ ("c:/pythonPractice/projects/" (21362 12760 0 0) "skeleton/" "ex47/" "../" "./")
+
+ ("c:/pythonPractice/projects/skeleton/tests/" (21362 12553 0 0) "__init__.pyc" "__init__.py" "NAME_tests.pyc" "NAME_tests.py" "../" "./")
+
+ ("c:/pythonPractice/projects/skeleton/" (21362 11641 0 0) "tests/" "setup.py" "NAME/" "docs/" "bin/" "../" "./")
+
+ ("c:/emacs-24.3/bin/" (21357 4921 0 0) "TUTORIAL" "testFile" "runemacs.exe" "profile.exe" "movemail.exe" "libXpm.dll" "hexl.exe" "foo~" "foo" "ex17_test.txt" "etags.exe" "emacsclientw.exe" "emacsclient.exe" "emacs.exe" "ebrowse.exe" "ddeclient.exe" "ctags.exe" "COPYING" "colemak.ahk~" "colemak.ahk" "cmdproxy.exe" "addpm.exe" "#TUTORIAL#" "#foo#" "#fo#" "../" "./")
+
+ ("c:/Buildworkspace/static/prime-app-server/static/" (21346 32979 0 0) "unavailable.html" "techHelp.html~" "techHelp.html" "registration/" "my-profile/" "mobile-decision.html" "login/" "knowledge-center/" "home.html" "faq.html" "error/" "disclosure/" "contactUs/" "contact.html" ".svn/" "#techHelp.html#" "../" "./")
+
+ ("c:/Buildworkspace/static/prime-app-server/" (21345 561 0 0) "zip.xml" "static/" "pom.xml" "bdx-deployment-glwashuatb.xml" "bdx-deployment-glwashuat.xml" "bdx-deployment-glwashintb.xml" "bdx-deployment-glwashint.xml" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/static/" (21297 53484 0 0) "prime-app-server/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGLStatic/MGLStaticWeb/src/main/java/org/mygreatlakes/mglstatic/" (21297 53176 0 0) "PropertiesUtil.java" "MGLStaticServlet.java" "MGLStaticDocRootServlet.java" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGLStatic/MGLStaticWeb/src/main/java/org/mygreatlakes/" (21297 53176 0 0) "mglstatic/" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGLStatic/MGLStaticWeb/src/main/java/org/" (21297 53176 0 0) "mygreatlakes/" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGLStatic/MGLStaticWeb/src/main/java/" (21297 53176 0 0) "props/" "org/" ".svn/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGLStatic/MGLStaticWeb/src/main/webapp/WEB-INF/classes/org/mygreatlakes/mglstatic/" (21329 10954 0 0) "PropertiesUtil.class" "MGLStaticServlet.class" "MGLStaticDocRootServlet.class" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGLStatic/MGLStaticWeb/src/main/webapp/WEB-INF/classes/org/mygreatlakes/" (21329 10953 0 0) "mglstatic/" "../" "./")
+
+ ("c:/Buildworkspace/Projects/MGLStatic/MGLStaticWeb/src/main/webapp/WEB-INF/classes/org/" (21329 10953 0 0) "mygreatlakes/" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
