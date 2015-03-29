@@ -1,22 +1,628 @@
-((("x" .
-   [1])
-  ("kbd" .
+((("frame" .
+   [2 0 0 0 0])
+  ("type" .
+   [1 0 0 0])
+  ("isinstance" .
+   [0 0 1 0 0 0 0 0 0 0])
+  ("not" .
    [1 0 0])
-  ("global-set-key" .
+  ("movie" .
+   [5 0 0 0 0])
+  ("strings" .
+   [4 0 0 0 0 0 0])
+  ("reader" .
+   [2 0 0 0 0 0])
+  ("file_obj" .
+   [1 0 0 0 1 0 0 0])
+  ("csv" .
+   [3 0 0])
+  ("isNaN" .
+   [1 0 0 0 0])
+  ("add-hook" .
+   [3 0 0 0 0 0 0 0])
+  ("c-mode" .
+   [1 0 0 0 0 0])
+  ("setq" .
+   [2 0 0 0])
+  ("to" .
+   [1 0])
+  ("true" .
+   [1 0 0 0])
+  ("char" .
+   [3 0 0 0])
+  ("newWord" .
+   [3 0 0 0 0 0 0])
+  ("thisWord" .
+   [2 0 0 0 0 0 0 0])
+  ("compare" .
+   [1 0 0 0 0 0 0])
+  ("word" .
+   [4 0 0 0])
+  ("uniqueWords" .
+   [7 0 0 0 0 0 2 0 0 0 0])
+  ("wordCount" .
+   [2 0 0 0 0 0 0 0 0])
+  ("vector" .
+   [4 0 0 0 0 0])
+  ("argc" .
+   [5 0 0 0])
+  ("struct" .
+   [1 0 0 0 0 0])
+  ("num2" .
+   [4 0 0 0])
+  ("num1" .
+   [3 0 0 0])
+  ("result" .
+   [2 0 0 0 0 0])
+  ("padding" .
+   [5 0 0 0 0 0 0])
+  ("rect" .
+   [1 0 0 0])
+  ("square" .
+   [2 0 0 0 0 0])
+  ("stars" .
+   [5 0 0 0 0])
+  ("colPad" .
+   [3 0 0 0 0 0])
+  ("inputPad" .
+   [3 0 0 0 0 0 0 0])
+  ("sidePad" .
+   [3 0 0 0 0 0 0])
+  ("pad" .
+   [4 0 0])
+  ("cols" .
+   [4 0 0 0])
+  ("output" .
+   [1 0 0 0 0 0])
+  ("size" .
+   [3 0 0 0])
+  ("of" .
+   [1 0])
+  ("s" .
+   [1])
+  ("read" .
+   [1 0 0 0])
+  ("cin" .
+   [3 0 0])
+  ("using" .
+   [9 0 0 0 0])
+  ("rows" .
+   [12 0 0 0])
+  ("Hello" .
+   [2 0 0 0 0])
+  ("write" .
+   [3 0 0 0 0])
+  ("intend" .
+   [2 0 0 0 0 0])
+  ("build" .
+   [1 0 0 0 0])
+  ("enter" .
+   [2 0 0 0 0])
+  ("Please" .
+   [2 0 0 0 0 0])
+  ("false" .
+   [2 0 0 0 0])
+  ("front" .
+   [4 0 0 0 0])
+  ("back" .
+   [7 0 0 0])
+  ("distance" .
+   [5 0 0 0 0 0 0 0])
+  ("center" .
+   [10 0 0 0 0 0])
+  ("limit" .
+   [2 0 0 0 0])
+  ("dir" .
+   [6 0 0])
+  ("height" .
+   [10 0 0 0 0 0])
+  ("width" .
+   [14 0 0 0 0])
+  ("rectangle" .
+   [1 0 0 0 0 0 0 0 0])
+  ("colorDirection" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("beg" .
+   [3 0 0])
+  ("stp" .
+   [5 0 0])
+  ("static" .
+   [12 0 0 0 0 0])
+  ("timev" .
+   [1 0 0 0 0])
+  ("0f" .
+   [12 0])
+  ("0" .
+   [3])
+  ("red" .
+   [9 0 0])
+  ("blue" .
+   [3 0 0 0])
+  ("green" .
+   [3 0 0 0 0])
+  ("time" .
+   [2 0 0 0])
+  ("float" .
+   [16 0 0 0 0])
+  ("include" .
+   [15 0 0 0 0 0 0])
+  ("key" .
+   [2 0 0])
+  ("del" .
+   [1 0 0])
+  ("most_common" .
+   [1 0 0 0 0 0 0 0 0 1 0])
+  ("repetitionMin" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("key_count" .
+   [1 0 0 0 0 0 0 0 0])
+  ("lambda" .
+   [1 0 0 0 0 0])
+  ("dropwhile" .
+   [1 0 0 0 0 0 0 0 0])
+  ("max" .
+   [7 0 0])
+  ("maximum" .
+   [4 0 0 0 0 0 0])
+  ("minimum" .
+   [8 0 0 0 0 0 0])
+  ("min" .
+   [5 0 0])
+  ("args" .
+   [1 0 0 0])
+  ("len" .
+   [3 0 0])
+  ("accumulator" .
+   [3 0 0 0 0 0 1 0 0 0 0])
+  ("argv" .
+   [11 0 1 0])
+  ("filename" .
+   [3 0 0 0 0 0 0 0])
+  ("txtFile" .
+   [1 0 0 0 0 0 0])
+  ("open" .
+   [1 0 0 0])
+  ("text" .
+   [8 0 0 0])
+  ("import" .
+   [4 0 0 0 0 0])
+  ("from" .
+   [2 0 0 0])
+  ("add" .
+   [1 0 0])
+  ("git" .
+   [6 0 0])
+  ("description:" .
+   [0 0 0 0 1 0 0 0 0 0 0 0])
+  ("M--" .
+   [1 0 0])
+  ("setq-default" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("italic" .
+   [2 0 0 0 0 0])
+  ("text-style" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("$inputRequirementArray" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("$inputSchedule" .
    [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("column-marker" .
+  ("br" .
+   [1 0])
+  ("removeItemAtIndex" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("testScheduleOptimizer" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("$item" .
+   [1 0 0 0 0])
+  ("array_splice" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("$index" .
+   [4 0 0 0 0 0])
+  ("$array" .
+   [5 0 0 0 0 0])
+  ("call" .
+   [1 0 0 0])
+  ("addToSchedule" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("$section" .
+   [2 0 0 0 0 0 0 0])
+  ("$schedule" .
+   [2 0 0 0 0 0 0 0 0])
+  ("$curPriority" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("addSectionAndPriority" .
+   [1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("$curSection" .
+   [3 0 0 0 0 0 0 0 0 0 0])
+  ("addToPriority" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("addSection" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("$first_entry" .
+   [2 0 0 0 0 0 0 0 0 0 0 0])
+  ("$getIdentificationQuery" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("$foundCourses" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("Time" .
+   [1 0 0 0])
+  ("id" .
+   [1 0])
+  ("$newTimeBlock" .
    [2 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("define-key" .
+  ("$endTime" .
+   [1 0 0 0 0 0 0 0])
+  ("$startTime" .
+   [0 0 0 0 0 0 0 1 0 0])
+  ("$day" .
+   [2 0 0 0])
+  ("$foundTimes" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("mysqli_fetch_assoc" .
+   [1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("$row" .
+   [5 0 0 0])
+  ("while" .
+   [4 0 0 0 0])
+  ("$classTimesQuery" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("mysqli_query" .
+   [2 0 0 0 0 0 0 0 0 0 0 0])
+  ("sectionID" .
+   [1 0 0 0 0 0 0 0 0])
+  ("buildClassTimes" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("courseID" .
+   [1 0 0 0 0 0 0 0])
+  ("section" .
+   [1 0 0 0 0 0 0])
+  ("$sectionID" .
+   [7 0 0 0 0 0 0 0 0 0])
+  ("break" .
+   [2 0 0 0 0])
+  ("doSomething" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("case" .
+   [2 0 0 0])
+  ("switch" .
+   [1 0 0 0 0 0])
+  ("MyClass" .
+   [1 0 0 0 0 0 0])
+  ("THIS_IS_A_CONSTANT" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("inBadMood" .
+   [4 0 0 0 0 0 0 0 0])
+  ("hungry" .
+   [3 0 0 0 0 0])
+  ("sad" .
+   [2 0 0])
+  ("int" .
+   [39 0 0])
+  ("const" .
+   [14 0 0 0 0])
+  ("catch" .
+   [1 0 0 0 0])
+  ("try" .
+   [2 0 0])
+  ("Exception" .
+   [2 0 0 0 0 0 0 0 0])
+  ("new" .
+   [8 0 0])
+  ("throw" .
+   [3 0 0 0 0])
+  ("$numClasses" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("exit" .
+   [2 0 0 0])
+  ("else" .
+   [12 0 0 0])
+  ("array_push" .
+   [5 0 0 0 0 0 0 0 0 0])
+  ("TimeBlock" .
+   [3 0 0 0 0 0 0 0 0])
+  ("instanceof" .
+   [5 0 0 0 0 0 0 0 0 0])
+  ("$thisClassTime" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("as" .
+   [2 0])
+  ("foreach" .
+   [2 0 0 0 0 0 0])
+  ("for" .
+   [27 0 0])
+  ("if" .
+   [37 0])
+  ("$courseID" .
+   [4 0 0 0 0 0 0 0 0])
+  ("setClassTimes" .
+   [1 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("$this" .
+   [45 0 0 0 0])
+  ("__construct" .
+   [3 0 0 0 1 0 0 0 0 0 0])
+  ("$inputClassTimes" .
+   [7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("$classTimes" .
+   [4 0 0 0 0 0 0 0 0 0 0])
+  ("function" .
+   [28 0 0 0 0 0 0 0])
+  ("private" .
+   [21 0 0 0 0 0 0])
+  ("bool" .
+   [5 0 0 0])
+  ("org-mode" .
+   [2 0 0 0 0 0 0 0])
+  ("require" .
+   [10 0 0 0 0 0 0])
+  ("add-to-list" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("custom-theme-load-path" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("load-theme" .
    [1 0 0 0 0 0 0 0 0 0])
   ("is" .
    [1 0])
-  ("load-theme" .
+  ("define-key" .
    [1 0 0 0 0 0 0 0 0 0])
-  ("custom-theme-load-path" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("add-to-list" .
+  ("column-marker" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("global-set-key" .
+   [1 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("kbd" .
+   [2 0 0])
+  ("x" .
+   [1])
+  ("or" .
+   [2 0])
+  ("Mode" .
+   [1 0 0 0])
+  ("mod" .
+   [1 0 0])
+  ("set" .
+   [1 0 0])
+  ("~/.emacs.d/org-mode-plugins/" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("org-id" .
+   [0 0 0 0 0 1])
+  ("load" .
+   [1 0 0 0])
+  ("org-table" .
+   [0 0 0 1 0 0 0 0 0])
+  ("org-mode-line-clock" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("Set" .
+   [2 0 0])
+  ("define" .
+   [2 0 0 0 0 0])
+  ("TRUE" .
+   [1 0 0 0])
+  ("$testInputs" .
    [1 0 0 0 0 0 0 0 0 0 0])
-  ("require" .
+  ("$errorCount" .
+   [3 0 0 0 0 1 0 0 0 0 0])
+  ("return" .
+   [17 0 1 0 0 0])
+  ("$newErrors" .
+   [0 0 0 0 0 1 0 0 0 0])
+  ("php" .
+   [4 0 0])
+  ("Course" .
+   [4 0 0 0 0 0])
+  ("Requirement" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("Section" .
    [2 0 0 0 0 0 0])
-  ("org-mode" .
-   [1 0 0 0 0 0 0 0])))
+  ("class" .
+   [3 0 0 0 0])
+  ("$inputSubject" .
+   [4 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("$inputId" .
+   [1 0 0 0 0 0 1 0])
+  ("subject" .
+   [3 0 0 0 0 0 0])
+  ("number" .
+   [3 0 0 0 0 0])
+  ("$inputPriority" .
+   [8 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("False" .
+   [3 0 0 0 0])
+  ("$isCourse" .
+   [4 0 0 0 0 0 0 0 0])
+  ("isCourse" .
+   [4 0 0 0 0 0 0 0])
+  ("True" .
+   [4 0 0 0])
+  ("course" .
+   [4 0 0 0 0 0])
+  ("$inputCourseOrTimeBlock" .
+   [5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("$thisCourse" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("get" .
+   [1 0 0])
+  ("getSections" .
+   [4 0 0 0 0 1 0 0 0 0 0])
+  ("elseif" .
+   [2 0 0 0 0 0])
+  ("conflict" .
+   [2 0 0 0 0 0 0 0])
+  ("$thisTimeBlock" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("die" .
+   [2 0 0])
+  ("print" .
+   [14 0 0 0 0])
+  ("NULL" .
+   [2 0 0 0])
+  ("$sectionArray" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("$priorityScore" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("priorityScore" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("$inputSection" .
+   [8 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("sectionArray" .
+   [4 0 0 0 0 0 0 0 0 0 0 0])
+  ("$thisSection" .
+   [2 0 0 0 0 0 0 0 0 0 0 0])
+  ("conflictsWith" .
+   [4 0 0 0 0 1 0 0 0 1 0 0 0])
+  ("$conflictFound" .
+   [2 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("$requirementArray" .
+   [3 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("$theseRequirements" .
+   [3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("count" .
+   [16 0 0 0 0])
+  ("Array" .
+   [1 0 0 0 0])
+  ("Schedule" .
+   [1 0 0 0 0 0 0 0])
+  ("$thisSchedule" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("defined" .
+   [1 0 0 0 0 0 0])
+  ("RESERVED_COURSE_ID" .
+   [0 0 0 0 0 3 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("RESERVED_SECTION_ID" .
+   [1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("$validCourse" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("$validSection" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("array" .
+   [3 0 0 0 0])
+  ("$requirementsArray" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("$reqIndex" .
+   [1 0 0 0 2 0 0 1 0])
+  ("$scheduleArray" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("echo" .
+   [25 0 0 0])
+  ("$results" .
+   [1 0 0 0 0 0 0 0])
+  ("$smallerArray" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("$curSchedule" .
+   [10 0 0 0 0 0 0 0 0 0 0 0])
+  ("$sections" .
+   [3 0 0 0 0 0 0 0 0])
+  ("a" .
+   [1])
+  ("$optionalTimeBlock" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("getPriority" .
+   [3 0 0 0 1 1 0 0 1 0 0])
+  ("$priority" .
+   [8 0 0 0 0 0 0 0 0])
+  ("$curRequirement" .
+   [5 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("PRIORITY_HIGHEST" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("$requirement1" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("priority" .
+   [1 0 0 0 0 0 0 0])
+  ("setPriority" .
+   [2 0 0 0 0 0 0 0 0 0 0])
+  ("$i" .
+   [1 0])
+  ("DateTime" .
+   [1 0 1 0 0 0 0 0])
+  ("$time" .
+   [2 0 0 0 0])
+  ("$clockStop" .
+   [0 0 0 0 0 0 1 0 0 0])
+  ("$clockStart" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("$elapsedTime" .
+   [0 0 0 0 0 1 0 0 0 0 0 0])
+  ("microtime" .
+   [1 0 0 0 0 0 0 0 0])
+  ("dir1" .
+   [1 0 0 0])
+  ("dir2" .
+   [2 0 0 0])
+  ("goToDirectory" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("commitHere" .
+   [3 0 0 0 0 0 0 0 0 0])
+  ("USER" .
+   [6 0 0 0])
+  ("PASS" .
+   [4 0 0 0])
+  ("def" .
+   [2 0 0])
+  ("params" .
+   [3 0 0 0 0 0])
+  ("start" .
+   [6 0 0 0 0])
+  ("shared" .
+   [2 0 0 0 0 0])
+  ("seq" .
+   [5 0 0])
+  ("str" .
+   [3 0 0])
+  ("stop" .
+   [4 0 0 0])
+  ("sequences" .
+   [3 0 0 0 0 0 0 0 0])
+  ("sharedSubstrings" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("compress" .
+   [1 0 0 0 0 0 0 0])
+  ("glColor3f" .
+   [1 0 0 0 0 0 0 0 0])
+  ("glBegin" .
+   [2 0 0 0 0 0 0])
+  ("GL_POLYGON" .
+   [1 0 0 0 0 0 1 0 0 0])
+  ("glEnd" .
+   [1 0 0 1 0])
+  ("glVertex3f" .
+   [4 0 0 0 0 0 0 0 0 0])
+  ("48f" .
+   [1 0 0])
+  ("0163299f" .
+   [2 0 0 0 0 0 0 0])
+  ("011547f" .
+   [4 0 0 0 0 0 0])
+  ("tip" .
+   [2 0 0])
+  ("tipDir" .
+   [3 0 0 0 0 0])
+  ("person" .
+   [3 0 0 0 0 0])
+  ("name" .
+   [16 0 0 0])
+  ("greeting" .
+   [10 0 0 0 0 0 0 0])
+  ("iostream" .
+   [3 0 0 0 0 0 0 0])
+  ("string" .
+   [27 0 0 0 0 0])
+  ("main" .
+   [4 0 0 0])
+  ("std" .
+   [43 0 0])
+  ("cout" .
+   [34 0 0 0])
+  ("second" .
+   [4 0 0 0 0 0])
+  ("spaces" .
+   [2 0 0 0 0 0])
+  ("first" .
+   [5 0 0 0 0])
+  ("endl" .
+   [25 0 0 0])
+  ("exec-path-from-shell-initialize" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("defun" .
+   [1 0 0 0 0])
+  ("bname" .
+   [2 0 0 0 0])
+  ("mkdir" .
+   [1 0 0 0 0])))
