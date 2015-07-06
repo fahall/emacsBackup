@@ -2,6 +2,7 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/Users/" . "alexhall/")
  ("c:/Users/Shanalex/Dropbox/emacs-24.3/" . "HOME/")
  ("c:/Users/Shanalex/Dropbox/" . "emacs-24.3/")
  ("c:/Users/Shanalex/Documents/UWW 2nd Degree/DegreePlanner/" . "scheduleOptimizer/")
@@ -79,6 +80,7 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/Users/alexhall/"
  "c:/Users/Shanalex/Documents/UWW 2nd Degree/DegreePlanner/scheduleOptimizer/"
  "c:/Users/Shanalex/Dropbox/emacs-24.3/HOME/"
  "c:/Buildworkspace/Projects/MGL-Prime/mgl-prime-web/src/main/webapp/WEB-INF/tiles/contactUs/"
@@ -128,10 +130,10 @@
 
 ;; ----- ido-work-file-list -----
 (
+ ".emacs"
  "TimeBlock.h"
  "scheduleOptimizer.cpp"
  "optimizerOutline.org"
- ".emacs"
  "scheduleOptimizer.php"
  "sendPayment.jsp"
  "home.jsp"
@@ -142,6 +144,14 @@
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/Users/alexhall/Documents/ScriptUtilities/" (21914 63298 0 0) "Scrivener.app/" "gitCommitAll.sh" "GitAutomation.app/" "fileToNum.app/" "decomposeMovies.sh" "basename \"$file\" .mp4/" "basename \"$file\" /" ".DS_Store" ".#gitCommitAll.sh" "../" "./")
+
+ ("/Users/" (21568 42094 0 0) "Shared/" "Guest/" "cusgadmin/" "alexhall/" "alex/" ".localized" "../" "./")
+
+ ("/Users/alexhall/.emacs.d/" (21914 62193 0 0) "themes/" "syntax-modes/" "srecode-map.el" "org-mode-plugins/" "general-tools/" "elpa/" "COPYING" "auto-save-list/" "ac-comphist.dat" ".DS_Store" "%backup%~" "../" "./")
+
+ ("/Users/alexhall/" (21914 62193 0 0) "thisIsATest.txt" "README.md" "pyNotebooks/" "Public/" "programmingLibs/" "Pictures/" "Music/" "Movies/" "matlab_crash_dump.6969-1" "matlab_crash_dump.6802-1" "matlab_crash_dump.58200-1" "matlab_crash_dump.54048-1" "matlab_crash_dump.22174-1" "matlab_crash_dump.13900-1" "Library/" "java.log.8821" "java.log.6662" "java.log.15587" "emacsOld/" "emacsBackup/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Applications/" ".Xauthority" ".viminfo" ".vim/" ".UGENE_files/" ".Trash/" ".subversion/" ".ssh/" ".smex-items" ".scep/" ".rnd" ".python_history" ".PyCharm40/" ".putty/" ".profile.pysave" ".profile" ".plexht/" ".mono/" ".matplotlib/" ".matlab/" ".local/" ".lldb/" ".keepassx/" ".kdiff3rc" ".ipython/" ".ido.last~" ".ido.last" ".gitconfig" ".git/" ".flexlmrc" ".emacs~" ".emacs.d/" ".emacs.before_ecb_2.40" ".emacs" ".dvdcss/" ".DS_Store" ".dropbox/" ".docear/" ".ddd/" ".cups/" ".continuum/" ".config/" ".cmake/" ".CFUserTextEncoding" ".cache/" ".bash_profile-anaconda.bak" ".bash_profile" ".bash_history" ".anyconnect" ".adobe/" ".account" "../" "./")
+
  ("c:/Users/Shanalex/Dropbox/emacs-24.3/HOME/" (21394 26510 0 0) "git/" ".smex-items" ".ido.last~" ".ido.last" ".emacs~" ".emacs.d/" ".emacs" "#deleteMe.html#" "../" "./")
 
  ("c:/Users/Shanalex/Documents/UWW 2nd Degree/DegreePlanner/scheduleOptimizer/" (21394 26658 0 0) "scheduleOptimizer.php" "scheduleOptimizer.cpp" "optimizerOutline.org" "../" "./")
@@ -333,12 +343,6 @@
  ("c:/Buildworkspace/Projects/MGLStatic/MGLStaticWeb/src/main/java/org/" (21297 53176 0 0) "mygreatlakes/" ".svn/" "../" "./")
 
  ("c:/Buildworkspace/Projects/MGLStatic/MGLStaticWeb/src/main/java/" (21297 53176 0 0) "props/" "org/" ".svn/" "../" "./")
-
- ("c:/Buildworkspace/Projects/MGLStatic/MGLStaticWeb/src/main/webapp/WEB-INF/classes/org/mygreatlakes/mglstatic/" (21329 10954 0 0) "PropertiesUtil.class" "MGLStaticServlet.class" "MGLStaticDocRootServlet.class" "../" "./")
-
- ("c:/Buildworkspace/Projects/MGLStatic/MGLStaticWeb/src/main/webapp/WEB-INF/classes/org/mygreatlakes/" (21329 10953 0 0) "mglstatic/" "../" "./")
-
- ("c:/Buildworkspace/Projects/MGLStatic/MGLStaticWeb/src/main/webapp/WEB-INF/classes/org/" (21329 10953 0 0) "mygreatlakes/" "../" "./")
 )
 
 ;; ----- ido-unc-hosts-cache -----

@@ -1,4 +1,4 @@
-
+glo
 ;; Enable line numbers in all files. 
  (global-linum-mode 1)
 
