@@ -214,7 +214,7 @@
 
 
  ;;Python Mode
-(add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
+;;(add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
  (add-hook 'python-mode-hook 'my-python-mode-hook)
 (defun my-python-mode-hook ()
   (rainbow-mode 1)
@@ -273,3 +273,5 @@
  ;;iPython Notebook
  (require 'ein)
 
+ ;;this variable seems necessary for django-mode
+ (setq py-autopep8-enable-on-save, t)
