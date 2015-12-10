@@ -273,8 +273,6 @@
  ;;iPython Notebook
  (require 'ein)
 
-;;this variable seems necessary for django-mode
-(require 'django-mode)
+
 (require 'py-autopep8)
- (setq py-autopep8-enable-on-save, t)
 (require 'python-django) 
