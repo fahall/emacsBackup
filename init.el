@@ -133,6 +133,7 @@
 
 (setq-default rainbow-mode 1)
 
+
  ;;Display tabs as 4 spaces.
  (setq-default tab-width 4)
     (defvaralias 'c-basic-offset 'tab-width)
