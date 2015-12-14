@@ -130,8 +130,8 @@
 
 
 (add-hook 'web-hook 'my-web-mode-hook)
-(defun my-css-mode-hook ()
-  (rainbow-mode 1))
+
+(setq-default rainbow-mode 1)
 
  ;;Display tabs as 4 spaces.
  (setq-default tab-width 4)
