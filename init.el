@@ -132,7 +132,7 @@
 (add-hook 'web-hook 'my-web-mode-hook)
 
 (setq-default rainbow-mode 1)
-
+(setq django-indend-width 4)
 
  ;;Display tabs as 4 spaces.
  (setq-default tab-width 4)
