@@ -267,9 +267,25 @@
 
 ;; Pair Parentheses
 
- (require 'autopair)
- (autopair-global-mode)
- (setq autopair-autowrap t)
+;; (require 'autopair)
+;; (autopair-global-mode)
+;; (setq autopair-autowrap t)
+
+(electric-pair-mode +1)
+
+(setq electric-pair-pairs '(
+                            (?\" . ?\")
+                            (?\{ . ?\})
+                            ) )
+
+(add-hook
+   'web-mode-hook
+   '(lambda ()
+      (setq web-mode-enable-auto-pairing nil)
+      (setq-local
+       electric-pair-pairs
+       (append electric-pair-pairs '((?% . ?%))))))
+
 
  ;;iPython Notebook
  (require 'ein)
@@ -277,3 +293,4 @@
 
 (require 'py-autopep8)
 (require 'python-django) 
+
