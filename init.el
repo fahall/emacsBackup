@@ -294,3 +294,6 @@
 (require 'py-autopep8)
 (require 'python-django) 
 
+
+;;tell tramp to use ssh
+(setq tramp-default-method "ssh")
