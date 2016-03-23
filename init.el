@@ -128,7 +128,9 @@
 (add-to-list 'auto-mode-alist '("\\.vtl\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.php\\'" . php-mode));; Set PHP-Mode for php files.
 
-(add-to-list 'auto-mode-alist '("\\.cu$" . cuda-mode)) 
+(add-to-list 'auto-mode-alist '("\\.cu$" . cuda-mode))
+(add-to-list 'auto-mode-alist '("\\.upc$" . c++-mode))
+
 
 
 (add-hook 'web-hook 'my-web-mode-hook)
@@ -287,6 +289,7 @@
       (setq-local
        electric-pair-pairs
        (append electric-pair-pairs '((?% . ?%))))))
+
 
 
  ;;iPython Notebook
