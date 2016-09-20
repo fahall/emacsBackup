@@ -108,9 +108,19 @@
    `((".*" ,temporary-file-directory t)))
 (put 'set-goal-column 'disabled nil)
 
- ;;Swap Windows & Frames quickly
- (global-set-key (kbd "M-s M-s") 'other-window)
- (global-set-key (kbd "M-s M-c") 'other-frame)
+;;Swap Windows & Frames quickly
+(setq windmove-wrap-around t)
+(global-set-key (kbd "M-s M-f") 'windmove-up)
+(global-set-key (kbd "M-s M-s") 'windmove-down)
+(global-set-key (kbd "M-s M-r") 'windmove-left)
+(global-set-key (kbd "M-s M-t") 'windmove-right)
+
+(global-set-key (kbd "M-s M-c") 'other-frame)
+(global-set-key (kbd "M-s M-x") (lambda () (other) (other-frame -1)g))
+
+
+
+
 
  ;;Set up Web-Mode for syntax highlighting
 
@@ -196,6 +206,9 @@
  ;;Define Default Workflow States
  (setq org-todo-keywords
 	   '((sequence "TODO" "WAITING" "DELEGATED" "DONE")))
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(setq org-log-done t)
 
  ;;Mac key rebinds
   (setq mac-option-modifier 'control)
