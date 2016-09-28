@@ -327,5 +327,5 @@
   (forward-line -1)
 )
 
-(global-set-key "\C-xt" 'move-line-down)
-(global-set-key "\C-ct" 'move-line-up)
+(global-set-key "\C-c\C-t" 'move-line-up)
+(global-set-key "\C-c\C-v" 'move-line-down)
