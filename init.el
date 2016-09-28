@@ -163,8 +163,9 @@
  (ac-config-default)
 
  ;;Activate Windmove Keys
- (when (fboundp 'windmove-default-keybindings)
-  (windmove-default-keybindings))
+ ;;(when (fboundp 'windmove-default-keybindings)
+ ;;(windmove-default-keybindings))
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -326,6 +327,6 @@
   (forward-line -1)
 )
 
-(global-set-key "\C-c\C-t" 'move-line-up)
-(global-set-key "\C-c\C-v" 'move-line-down)
+(global-set-key "<S-up>" 'move-line-up)
+(global-set-key "<S-down" 'move-line-down)
 
