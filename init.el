@@ -326,6 +326,6 @@
   (transpose-lines 1)
   (forward-line -1)
 )
-(global-set-key "\C-x\C-t" 'move-line-up)
 
 (global-set-key "\C-xt" 'move-line-down)
+(global-set-key "\C-ct" 'move-line-up)
