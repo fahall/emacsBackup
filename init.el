@@ -63,6 +63,7 @@
  ;; Add Solarized Theme
  (add-to-list 'custom-theme-load-path "~/emacsBackup/.emacs.d/themes/emacs-color-theme-solarized")
   
+
  ;; Start with subword mode on
  ;; easier navigation of camelCase
  (load "subword.el")
