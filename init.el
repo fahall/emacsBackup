@@ -114,6 +114,10 @@
 (global-set-key (kbd "M-s M-t") 'windmove-right)
 (global-set-key (kbd "M-s M-c") 'other-frame)
 
+(global-set-key (kbd "<Shift-up") 'windmove-up)
+(global-set-key (kbd "<Shift-down") 'windmove-down)
+(global-set-key (kbd "<Shift-left") 'windmove-left)
+(global-set-key (kbd "<Shift-right") 'windmove-right)
 
 
 
