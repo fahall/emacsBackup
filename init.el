@@ -114,7 +114,7 @@
 (global-set-key (kbd "M-s M-t") 'windmove-right)
 
 (global-set-key (kbd "M-s M-c") 'other-frame)
-(global-set-key (kbd "M-s M-x") (lambda ((other-frame -1)))
+(global-set-key (kbd "M-s M-x") (lambda (other-frame -1))
 
 
 
