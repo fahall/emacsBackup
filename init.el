@@ -114,7 +114,7 @@
 (global-set-key (kbd "M-s M-t") 'windmove-right)
 
 (global-set-key (kbd "M-s M-c") 'other-frame)
-(global-set-key (kbd "M-s M-x") (lambda () (other) (other-frame -1)g))
+(global-set-key (kbd "M-s M-x") (lambda ((other-frame -1)))
 
 
 
@@ -329,3 +329,4 @@
 
 (global-set-key "\C-c\C-t" 'move-line-up)
 (global-set-key "\C-c\C-v" 'move-line-down)
+
