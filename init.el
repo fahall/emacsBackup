@@ -72,7 +72,8 @@
  ;; Turn on Visible Mark
  (add-to-list 'load-path "~/emacsBackup/.emacs.d/general-tools/")
  (load "visible-mark.el")
- ;; Load extra help commands
+
+;; Load extra help commands
  (load "help-fns+.el")
 
  ;; Turn on Whitespace Mode
