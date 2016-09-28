@@ -63,10 +63,6 @@
  ;; Add Solarized Theme
  (add-to-list 'custom-theme-load-path "~/emacsBackup/.emacs.d/themes/emacs-color-theme-solarized")
   
- ;; Robust iMenu with ido
- ;; map iMenu to M-i
- (global-set-key (kbd "M-i") 'ido-goto-symbol)
-
  ;; Start with subword mode on
  ;; easier navigation of camelCase
  (load "subword.el")
