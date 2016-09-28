@@ -327,6 +327,6 @@
   (forward-line -1)
 )
 
-(global-set-key "<S-up>" 'move-line-up)
-(global-set-key "<S-down" 'move-line-down)
+(global-set-key "S-up" 'move-line-up)
+(global-set-key "S-down" 'move-line-down)
 
