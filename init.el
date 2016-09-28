@@ -163,8 +163,8 @@
  (ac-config-default)
 
  ;;Activate Windmove Keys
- ;;(when (fboundp 'windmove-default-keybindings)
- ;;(windmove-default-keybindings))
+;;(when (fboundp 'windmove-default-keybindings)
+;;  (windmove-default-keybindings))
 
 
 (custom-set-variables
