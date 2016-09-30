@@ -80,7 +80,7 @@
  (require 'whitespace)
  (setq whitespace-style '(face lines-tail))
 (global-whitespace-mode t)
-(setq whitespace-global-modes '(c-mode c++-mode web-mode python-mode php-mode))
+(setq whitespace-global-modes '(c-mode c++-mode cuda-mode web-mode python-mode php-mode))
 
  ;; Enable Smart Scan Mode
  ;; Quickly search for identifier at current point
