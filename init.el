@@ -350,5 +350,7 @@
 
 (global-set-key "\C-x~" 'set-80-columns)
 
+;; enable autopep8 formatting on save
 (require 'py-autopep8)
 (add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
+
