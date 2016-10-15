@@ -349,3 +349,4 @@
   (set-window-width 80))
 
 (global-set-key "\C-x~" 'set-80-columns)
+
