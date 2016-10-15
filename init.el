@@ -349,3 +349,104 @@
   (set-window-width 80))
 
 (global-set-key "\C-x~" 'set-80-columns)
+
+
+(defcustom python-autopep8-path (executable-find "autopep8")
+      
+
+      
+        
+  "autopep8 executable path."
+      
+
+      
+        
+  :group 'python
+      
+
+      
+        
+  :type 'string)
+      
+
+      
+        
+
+
+      
+
+      
+        
+(defun python-autopep8 ()
+      
+
+      
+        
+  "Automatically formats Python code to conform to the PEP 8 style guide.
+      
+
+      
+        
+$ autopep8 --in-place --aggressive --aggressive <filename>"
+      
+
+      
+        
+  (interactive)
+      
+
+      
+        
+  (when (eq major-mode 'python-mode)
+      
+
+      
+        
+    (shell-command 
+      
+
+      
+        
+     (format "%s --in-place --aggressive %s" python-autopep8-path
+      
+
+      
+        
+             (shell-quote-argument (buffer-file-name))))
+      
+
+      
+        
+    (revert-buffer t t t)))
+      
+
+      
+        
+
+
+      
+
+      
+        
+(bind-key "C-c C-a" 'python-auto-format)
+      
+
+      
+        
+
+
+      
+
+      
+        
+(eval-after-load 'python
+      
+
+      
+        
+  '(if python-autopep8-path
+      
+
+      
+        
+       (add-hook 'before-save-hook 'python-autopep8)))
