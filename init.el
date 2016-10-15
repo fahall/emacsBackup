@@ -366,7 +366,7 @@ $ autopep8 --in-place --aggressive --aggressive <filename>"
              (shell-quote-argument (buffer-file-name))))
     (revert-buffer t t t)))
         
-(global-set-key "C-c C-a" 'python-auto-format)
+(global-set-key "\C-c \C-a" 'python-auto-format)
         
 (eval-after-load 'python
   '(if python-autopep8-path
