@@ -208,10 +208,10 @@
 
  ;;Define Default Workflow States
  (setq org-todo-keywords
-	   '((sequence "TODO" "WAITING" "DELEGATED" "DONE")))
+	   '((sequence "TODO" "NOW" "DONE")))
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
-(setq org-log-done t)
+(setq org-log-done f)
 
  ;;Mac key rebinds
   (setq mac-option-modifier 'control)
