@@ -211,7 +211,7 @@
 	   '((sequence "TODO" "NOW" "DONE")))
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
-(setq org-log-done f)
+(setq org-log-done nil)
 
  ;;Mac key rebinds
   (setq mac-option-modifier 'control)
