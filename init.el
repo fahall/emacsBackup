@@ -92,14 +92,6 @@
  (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
  (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 
- ;; Set up Melpa
- ;; a package installer
- (require 'package)
-  (add-to-list 'package-archives
-    '("melpa" . "http://melpa.milkbox.net/packages/") t)
-
- (package-initialize)
-
  ;;Store all backup files in C:/Temp
  (setq backup-directory-alist
    `((".*" . ,temporary-file-directory)))
@@ -185,7 +177,6 @@
  '(custom-safe-themes (quote ("769bb56fb9fd7e73459dcdbbfbae1f13e734cdde3cf82f06a067439568cdaa95" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "4eaad15465961fd26ef9eef3bee2f630a71d8a4b5b0a588dc851135302f69b16" "2b5aa66b7d5be41b18cc67f3286ae664134b95ccc4a86c9339c886dfd736132d" "ed81411169b1b3e3d4cfc39b09d68ea13e0ff7708dc5b9d0bedb319e071968ad" "51bea7765ddaee2aac2983fac8099ec7d62dff47b708aa3595ad29899e9e9e44" "978ff9496928cc94639cb1084004bf64235c5c7fb0cfbcc38a3871eb95fa88f6" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "17034e7e911c6dced02ff9ed23bae2967b94f2585a7c942afbfae936b9e40a61" "9bac44c2b4dfbb723906b8c491ec06801feb57aa60448d047dbfdbd1a8650897" "e53cc4144192bb4e4ed10a3fa3e7442cae4c3d231df8822f6c02f1220a0d259a" default)))
  '(fci-rule-color "#383838")
  '(foreground-color "#839496")
- '(org-agenda-files (quote ("c:/pythonPractice/orgPractice/2.org" "c:/pythonPractice/orgPractice/1.org")))
  '(vc-annotate-background "#2B2B2B")
  '(vc-annotate-color-map (quote ((20 . "#BC8383") (40 . "#CC9393") (60 . "#DFAF8F") (80 . "#D0BF8F") (100 . "#E0CF9F") (120 . "#F0DFAF") (140 . "#5F7F5F") (160 . "#7F9F7F") (180 . "#8FB28F") (200 . "#9FC59F") (220 . "#AFD8AF") (240 . "#BFEBBF") (260 . "#93E0E3") (280 . "#6CA0A3") (300 . "#7CB8BB") (320 . "#8CD0D3") (340 . "#94BFF3") (360 . "#DC8CC3"))))
  '(vc-annotate-very-old-color "#DC8CC3"))
@@ -203,17 +194,67 @@
  ;;SET UP ORG MODE
  ;; (require org-mode)
  (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
- (global-set-key "\C-cl" 'org-store-link)
- (global-set-key "\C-ca" 'org-agenda)
 
  ;;Define Default Workflow States
  (setq org-todo-keywords
 	   '((sequence "TODO" "NOW" "DONE")))
-(define-key global-map "\C-cl" 'org-store-link)
-(define-key global-map "\C-ca" 'org-agenda)
-(setq org-log-done nil)
 
- ;;Mac key rebinds
+;; set key for agenda
+
+(define-key global-map "\C-cl" 'org-store-link)
+(global-set-key (kbd "C-c a") 'org-agenda)
+
+(setq org-log-done t)
+
+;;file to save todo items
+(setq org-agenda-files (quote ("~/org/todo.org" "~/Documents/filmGrammar/todo.org")))
+
+;;set priority range from A to C with default A
+(setq org-highest-priority ?A)
+(setq org-lowest-priority ?C)
+(setq org-default-priority ?A)
+
+;;set colours for priorities
+(setq org-priority-faces '((?A . (:foreground "#F0DFAF" :weight bold))
+                           (?B . (:foreground "LightSteelBlue"))
+                           (?C . (:foreground "OliveDrab"))))
+
+;;open agenda in current window
+(setq org-agenda-window-setup (quote current-window))
+
+;;capture todo items using C-c c t
+(define-key global-map (kbd "C-c c") 'org-capture)
+(setq org-capture-templates
+      '(("t" "Todo" entry (file+headline "~/org/todo.org" "Tasks")
+		 "* TODO [#B] %? :%^{Tags}:\n:Created: %U\n"  ; template
+		 :prepend t        ; properties
+		 :empty-lines 1    ; properties
+		 :created t        ; properties
+		 )
+		("j" "Journal" entry (file+datetree "~/org/journal.org")
+		 "* %?"
+		 :empty-lines 1)
+		("n" "Note" entry (file+headline "~/org/notes.org" "Notes")
+         "* %?\nEntered on %U\n  %i\n  %a")
+		("f" "filmgrammar todo" entry (file+headline "~/Documents/filmGrammar/todo.org" "Tasks")
+		 "* TODO [#B] %? :%^{Tags}:filmgrammar:ucb:research:code:work:\n:Created: %U\n"  ; template
+		 :prepend t        ; properties
+		 :empty-lines 1    ; properties
+		 :created t        ; properties
+		 )
+		))
+
+(add-hook 'org-mode-hook
+          (lambda ()
+            (org-indent-mode t))
+          t)
+(add-hook 'org-mode-hook 'visual-line-mode)
+(add-hook 'org-agenda-mode-hook
+          (lambda ()
+            (visual-line-mode -1)
+            (toggle-truncate-lines 1)))
+
+;;Mac key rebinds
   (setq mac-option-modifier 'control)
   (setq mac-command-modifier 'meta)
   (setq mac-control-modifier 'super)
@@ -353,3 +394,6 @@
 ;; enable autopep8 formatting on save
 (require 'py-autopep8)
 (add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
+
+
+(setq debug-on-error t)
