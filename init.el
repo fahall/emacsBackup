@@ -280,7 +280,7 @@
 
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t)
-
+(elpy-enable)
 ;;iPython Notebook
  (autoload 'ein "ein")
 (require 'python-django) 
