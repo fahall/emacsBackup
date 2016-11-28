@@ -281,6 +281,10 @@
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t)
 (elpy-enable)
+
+(require 'py-isort)
+(add-hook 'before-save-hook 'py-isort-before-save)
+
 ;;iPython Notebook
  (autoload 'ein "ein")
 (require 'python-django) 
