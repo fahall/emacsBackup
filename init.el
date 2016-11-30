@@ -251,11 +251,11 @@
 
  (add-to-list 'load-path "~/emacsBackup/.emacs.d/auto-complete-1.3.1")
 
- (add-to-list 'ac-dictionary-directories "~/emacsBackup/.emacs.d/ac-dict")
- (add-to-list 'ac-dictionary-directories "~/emacsBackup/.emacs.d/ac-clang")
- (add-to-list 'ac-dictionary-directories "~/emacsBackup/.emacs.d/ac-anaconda")
- (add-to-list 'ac-dictionary-directories "~/emacsBackup/.emacs.d/ac-helm")
- (add-to-list 'ac-dictionary-directories "~/emacsBackup/.emacs.d/ac-html")
+ ;; (add-to-list 'ac-dictionary-directories "~/emacsBackup/.emacs.d/ac-dict")
+ ;; (add-to-list 'ac-dictionary-directories "~/emacsBackup/.emacs.d/ac-clang")
+ ;; (add-to-list 'ac-dictionary-directories "~/emacsBackup/.emacs.d/ac-anaconda")
+ ;; (add-to-list 'ac-dictionary-directories "~/emacsBackup/.emacs.d/ac-helm")
+ ;; (add-to-list 'ac-dictionary-directories "~/emacsBackup/.emacs.d/ac-html")
 
 ;;Autocomplete Config
   (require 'auto-complete)
