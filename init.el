@@ -245,7 +245,7 @@
 ;;Set up autocomplete
  ;;Add autocomplete for coding
  (add-to-list 'load-path "~/emacsBackup/.emacs.d/general-tools/")
- (add-to-list 'ac-dictionary-directories "~/emacsBackup/.emacs.d/general-tools//ac-dict")
+ (add-to-list 'ac-dictionary-directories "~/emacsBackup/.emacs.d/general-tools/ac-dict")
 
 
 
