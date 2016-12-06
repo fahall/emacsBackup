@@ -265,7 +265,6 @@
  (add-hook 'python-mode-hook 'my-python-mode-hook)
 (defun my-python-mode-hook () 
   (rainbow-mode 1)
-  (anaconda-mode 1)
   )
 
 (elpy-enable)
