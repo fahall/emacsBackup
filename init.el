@@ -181,7 +181,7 @@
 (setq org-log-done t)
 
 ;;file to save todo items
-(setq org-agenda-files (quote ("~/org/todo.org" "~/Documents/filmGrammar/todo.org")))
+(setq org-agenda-files (quote ("~/Dropbox/org/")))
 
 ;;set priority range from A to C with default A
 (setq org-highest-priority ?A)
@@ -199,18 +199,23 @@
 ;;capture todo items using C-c c t
 (define-key global-map (kbd "C-c c") 'org-capture)
 (setq org-capture-templates
-      '(("t" "Todo" entry (file+headline "~/org/todo.org" "Tasks")
+      '(("t" "Todo" entry (file+headline "~/Dropbox/org/todo.org" "Tasks")
 		 "* TODO [#B] %? :%^{Tags}:\n:Created: %U\n"  ; template
 		 :prepend t        ; properties
 		 :empty-lines 1    ; properties
 		 :created t        ; properties
 		 )
-		("j" "Journal" entry (file+datetree "~/org/journal.org")
+		("j" "Journal" entry (file+datetree "~/Dropbox/org/journal.org")
 		 "* %?"
+         "* %?\nCreated: %U\n  %i\n  %a"
 		 :empty-lines 1)
-		("n" "Note" entry (file+headline "~/org/notes.org" "Notes")
-         "* %?\nEntered on %U\n  %i\n  %a")
-		("f" "filmgrammar todo" entry (file+headline "~/Documents/filmGrammar/todo.org" "Tasks")
+		("n" "Note" entry (file+headline "~/Dropbox/org/notes.org" "Notes")
+         "* %?\nCreated: %U\n  %i\n  %a"
+        :empty-lines 1)
+		("i" "Inbox" entry (file+headline "~/Dropbox/org/inbox.org" "Inbox")
+         "* %?\nCreated: %U\n  %i\n  %a"
+        :empty-lines 1)
+		("f" "filmgrammar todo" entry (file+headline "~/Dropbox/org/research.org" "Tasks")
 		 "* TODO [#B] %? :%^{Tags}:filmgrammar:ucb:research:code:work:\n:Created: %U\n"  ; template
 		 :prepend t        ; properties
 		 :empty-lines 1    ; properties
@@ -492,3 +497,62 @@
 
 
 
+(setq org-agenda-custom-commands
+      '(("h" "Daily habits" 
+         ((agenda ""))
+         ((org-agenda-show-log t)
+          (org-agenda-ndays 7)
+          (org-agenda-log-mode-items '(state))
+          (org-agenda-skip-function '(org-agenda-skip-entry-if 'notregexp ":DAILY:"))))
+        ;; other commands here
+        ("n" "Agenda and all TODO's"
+          ((agenda "")
+           (alltodo "")))
+        ))
+
+;;open agenda in current window
+(setq org-agenda-window-setup (quote current-window))
+;;warn me of any deadlines in next 7 days
+(setq org-deadline-warning-days 7)
+;;don't show tasks as scheduled if they are already shown as a deadline
+(setq org-agenda-skip-scheduled-if-deadline-is-shown t)
+;;don't give awarning colour to tasks with impending deadlines
+;;if they are scheduled to be done
+(setq org-agenda-skip-deadline-prewarning-if-scheduled (quote pre-scheduled))
+;;don't show tasks that are scheduled or have deadlines in the
+;;normal todo list
+(setq org-agenda-todo-ignore-deadlines (quote all))
+(setq org-agenda-todo-ignore-scheduled (quote all))
+;;sort tasks in order of when they are due and then by priority
+(setq org-agenda-sorting-strategy
+  (quote
+   ((agenda deadline-up priority-down)
+    (todo priority-down category-keep)
+    (tags priority-down category-keep)
+    (search category-keep))))
+
+(setq org-agenda-todo-ignore-scheduled 'future)
+(setq org-agenda-tags-todo-honor-ignore-options t)
+
+(setq org-modules '(org-bbdb
+                    org-gnus
+                    org-drill
+                    org-info
+                    org-jsinfo
+                    org-habit
+                    org-irc
+                    org-mouse
+                    org-protocol
+                    org-annotate-file
+                    org-eval
+                    org-expiry
+                    org-interactive-query
+                    org-man
+                    org-collector
+                    org-panel
+                    org-screen
+                    org-toc))
+(eval-after-load 'org
+ '(org-load-modules-maybe t))
+;; Prepare stuff for org-export-backends
+(setq org-export-backends '(org latex icalendar html ascii))
