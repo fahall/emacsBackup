@@ -552,7 +552,22 @@
                     org-panel
                     org-screen
                     org-toc))
+
 (eval-after-load 'org
  '(org-load-modules-maybe t))
 ;; Prepare stuff for org-export-backends
 (setq org-export-backends '(org latex icalendar html ascii))
+
+(defun ah/org-todo-custom-date (&optional arg)
+  "Like org-todo-yesterday, but prompt the user for a date. The time
+of change will be 23:59 on that day"
+  (interactive "P")
+  (let* ((hour (nth 2 (decode-time
+               (org-current-time))))
+     (daysback (- (date-to-day (current-time-string)) (org-time-string-to-absolute (org-read-date))))
+     (org-extend-today-until (+ 1 (* 24 (- daysback 1)) hour))
+     (org-use-effective-time t)) ; use the adjusted timestamp for logging
+    (if (eq major-mode 'org-agenda-mode)
+    (org-agenda-todo arg)
+      (org-todo arg))))
+
