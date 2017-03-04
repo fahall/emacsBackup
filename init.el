@@ -171,7 +171,7 @@
 
  ;;Define Default Workflow States
  (setq org-todo-keywords
-	   '((sequence "TODO" "NOW" "DONE")))
+	   '((sequence "TODO" "DONE")))
 
 ;; set key for agenda
 
