@@ -120,12 +120,14 @@
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.css\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.vtl\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.php\\'" . php-mode));; Set PHP-Mode for php files.
-
 (add-to-list 'auto-mode-alist '("\\.cu$" . cuda-mode))
 (add-to-list 'auto-mode-alist '("\\.upc$" . c++-mode))
 
+;; My custom creative writing file format
+(add-to-list 'auto-mode-alist '("\\.ink$" . org-mode))
 
 
 (add-hook 'web-hook 'my-web-mode-hook)
