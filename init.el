@@ -501,17 +501,32 @@
 
 
 (setq org-agenda-custom-commands
-      '(("h" "Daily habits" 
+      '(
+        ("h" "Daily habits" 
          ((agenda ""))
          ((org-agenda-show-log t)
           (org-agenda-ndays 7)
           (org-agenda-log-mode-items '(state))
-          (org-agenda-skip-function '(org-agenda-skip-entry-if 'notregexp ":DAILY:"))))
-        ;; other commands here
+          (org-agenda-skip-function '(org-agenda-skip-entry-if 'notregexp ":DAILY:")))
+         );; end "h" view
         ("n" "Agenda and all TODO's"
-          ((agenda "")
-           (tags-todo "-habit" )))
-        ))
+         (
+          ;;Agenda section
+          (agenda ""
+                     ((org-agenda-overriding-header "This week"))
+                  )
+          ;; todo section
+          (tags-todo "-Wunderlist-habit"
+                     ((org-agenda-overriding-header "To Do"))
+          )
+          ;; Wunderlist Section
+          (tags-todo "Wunderlist"
+                     ((org-agenda-overriding-header "Wunderlist"))
+                     )
+          )
+         );; end "n" view
+        );;end list of custom views
+      );end org-agenda-custom-commands call
 
 ;;open agenda in current window
 (setq org-agenda-window-setup (quote current-window))
@@ -534,15 +549,24 @@
     (tags priority-down category-keep)
     (search category-keep))))
 
+(require 'org-wunderlist)
+(setq org-wunderlist-client-id "aae80f661b848468d6f9"
+      org-wunderlist-token "c463911f3592a80ae4a7e70a0bda6404a9a50fceb23a608a64756d64de1f"
+      org-wunderlist-file  "~/Dropbox/org/Wunderlist.org"
+      org-wunderlist-dir "~/Dropbox/org/org-wunderlist/")
+
 (setq org-agenda-todo-ignore-scheduled 'future)
 (setq org-agenda-tags-todo-honor-ignore-options t)
-
 (setq org-modules '(org-bbdb
                     org-gnus
                     org-info
                     org-habit
                     org-mouse
                     org-protocol
+                    org-ref
+                    org-wc
+                    toc-org
+                    org-wunderlist
                     org-irc))
 ;;                    org-drill
 ;;                    org-jsinfo
@@ -593,4 +617,24 @@ of change will be 23:59 on that day"
 ;;(require 'org-mobile-sync)
 ;;(org-mobile-sync-mode 1)
 
+
+;; run org functions on save
+(add-hook 'org-mode-hook
+          (lambda()
+            (add-hook 'write-contents-functions
+                      (lambda()
+                        (save-excursion
+                          (org-wunderlist-fetch)))))
+          )
+(defun my-python-mode-hook () 
+  (rainbow-mode 1)
+  )
+
+(defun automatic-org-syncing ()
+  (interactive)
+  (org-mobile-pull)
+  (org-mobile-push)
+  (org-wunderlist-fetch)
+  (org-wunderlist-post-all)
+  )
 
