@@ -376,7 +376,7 @@
 
 (global-set-key (kbd "M-s s")   #'helm-ag)
 
-(autoload 'helm-projectile)
+(autoload 'helm-projectile "helm projectile")
 (setq helm-projectile-sources-list (cons 'helm-source-projectile-files-list
                                          (remove 'helm-source-projectile-files-list 
                                               helm-projectile-sources-list)))
@@ -391,8 +391,8 @@
           (lambda ()
             (define-key org-mode-map (kbd "C-x c o h") #'helm-org-headlines)))
 
-(autoload 'helm-flyspell)
-(autoload 'flycheck)
+(autoload 'helm-flyspell "helm-flyspell")
+(autoload 'flycheck "flycheck")
 ;; add flyspell correction to helm
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (define-key flyspell-mode-map (kbd "C-;") 'helm-flyspell-correct)
@@ -441,10 +441,10 @@
   (autoload 'zap-up-to-char "misc"
     "Kill up to, but not including ARGth occurrence of CHAR." t)
 
-  (autoload 'uniquify)
+  (autoload 'uniquify "uniquify")
   (setq uniquify-buffer-name-style 'forward)
 
-  (autoload 'saveplace)
+  (autoload 'saveplace "saveplace")
   (setq-default save-place t)
 
   (global-set-key (kbd "M-/") 'hippie-expand)
@@ -598,7 +598,7 @@
     (tags priority-down category-keep)
     (search category-keep))))
 
-(autoload 'org-wunderlist)
+(autoload 'org-wunderlist "org-wunderlist")
 (setq org-wunderlist-client-id "aae80f661b848468d6f9"
       org-wunderlist-token "c463911f3592a80ae4a7e70a0bda6404a9a50fceb23a608a64756d64de1f"
       org-wunderlist-file  "~/Dropbox/org/Wunderlist.org"
@@ -657,7 +657,7 @@ of change will be 23:59 on that day"
 ;;(org-mobile-sync-mode 1)
 
 ;; additional org settingss
-(autoload 'helm-org-rifle)
+(autoload 'helm-org-rifle "helm-org-rifle")
 
 
 (defun my-python-mode-hook () 
