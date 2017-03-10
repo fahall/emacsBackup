@@ -72,7 +72,7 @@
  (load "help-fns+.el")
 
  ;; Turn on Whitespace Mode
- (require 'whitespace "whitespace")
+ (require 'whitespace)
  (setq whitespace-style '(face lines-tail))
 (global-whitespace-mode t)
 (setq whitespace-global-modes '(c-mode c++-mode cuda-mode web-mode python-mode php-mode))
@@ -110,7 +110,7 @@
  ;;Set up Web-Mode for syntax highlighting
 
  (add-to-list 'load-path "~/emacsBackup/.emacs.d/syntax-modes/")
-(require 'web-mode "web mode")
+(require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
@@ -391,8 +391,8 @@
           (lambda ()
             (define-key org-mode-map (kbd "C-x c o h") #'helm-org-headlines)))
 
-(require 'helm-flyspell "helm-flyspell")
-(require 'flycheck "flycheck")
+(require 'helm-flyspell )
+(require 'flycheck )
 ;; add flyspell correction to helm
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (define-key flyspell-mode-map (kbd "C-;") 'helm-flyspell-correct)
@@ -441,10 +441,10 @@
   (require 'zap-up-to-char "misc"
     "Kill up to, but not including ARGth occurrence of CHAR." t)
 
-  (require 'uniquify "uniquify")
+  (require 'uniquify )
   (setq uniquify-buffer-name-style 'forward)
 
-  (require 'saveplace "saveplace")
+  (require 'saveplace)
   (setq-default save-place t)
 
   (global-set-key (kbd "M-/") 'hippie-expand)
@@ -598,7 +598,7 @@
     (tags priority-down category-keep)
     (search category-keep))))
 
-(require 'org-wunderlist "org-wunderlist")
+(require 'org-wunderlist)
 (setq org-wunderlist-client-id "aae80f661b848468d6f9"
       org-wunderlist-token "c463911f3592a80ae4a7e70a0bda6404a9a50fceb23a608a64756d64de1f"
       org-wunderlist-file  "~/Dropbox/org/Wunderlist.org"
@@ -657,7 +657,7 @@ of change will be 23:59 on that day"
 ;;(org-mobile-sync-mode 1)
 
 ;; additional org settingss
-(require 'helm-org-rifle "helm-org-rifle")
+(require 'helm-org-rifle )
 
 
 (defun my-python-mode-hook () 
@@ -666,7 +666,7 @@ of change will be 23:59 on that day"
 
 
 (add-to-list 'org-tag-alist '("TOC" . ?T))
-(require 'wc-mode "word count mode")
+(require 'wc-mode)
 
 
 (provide 'init)
