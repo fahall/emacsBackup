@@ -335,7 +335,7 @@
 (setq projectile-mode t)
 
 ;; HELM setup
-(autoload 'helm "helm")
+(require 'helm "helm")
 (setq helm-ff-transformer-show-only-basename nil
       helm-adaptive-history-file             "~/emacsBackup/.emacs.d/data/helm-history"
       helm-yank-symbol-first                 t
@@ -376,7 +376,7 @@
 
 (global-set-key (kbd "M-s s")   #'helm-ag)
 
-(autoload 'helm-projectile "helm projectile")
+(require 'helm-projectile)
 (setq helm-projectile-sources-list (cons 'helm-source-projectile-files-list
                                          (remove 'helm-source-projectile-files-list 
                                               helm-projectile-sources-list)))
