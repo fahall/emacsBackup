@@ -312,26 +312,26 @@
 
 (global-set-key "\C-x~" 'set-80-columns)
 
-(use-package ivy :ensure t
-  :diminish (ivy-mode . "")
-  :bind
-  (:map ivy-mode-map
-   ("C-'" . ivy-avy))
-  :config
-  (ivy-mode 1)
-  ;; add ‘recentf-mode’ and bookmarks to ‘ivy-switch-buffer’.
-  (setq ivy-use-virtual-buffers t)
-  ;; number of result lines to display
-  (setq ivy-height 10)
-  ;; does not count candidates
-  (setq ivy-count-format "")
-  ;; no regexp by default
-  (setq ivy-initial-inputs-alist nil)
-  ;; configure regexp engine.
-  (setq ivy-re-builders-alist
-	;; allow input not in order
-        '((t   . ivy--regex-ignore-order))))
-;; Projectile Mode
+;;(use-package ivy :ensure t
+;;  :diminish (ivy-mode . "")
+;;  :bind
+;;  (:map ivy-mode-map
+;;   ("C-'" . ivy-avy))
+;;  :config
+;;  (ivy-mode 1)
+;;  ;; add ‘recentf-mode’ and bookmarks to ‘ivy-switch-buffer’.
+;;  (setq ivy-use-virtual-buffers t)
+;;  ;; number of result lines to display
+;;  (setq ivy-height 10)
+;;  ;; does not count candidates
+;;  (setq ivy-count-format "")
+;;  ;; no regexp by default
+;;  (setq ivy-initial-inputs-alist nil)
+;;  ;; configure regexp engine.
+;;  (setq ivy-re-builders-alist
+;;	;; allow input not in order
+;;        '((t   . ivy--regex-ignore-order))))
+;;;; Projectile Mode
 (setq projectile-mode t)
 
 ;; HELM setup
@@ -395,7 +395,7 @@
 ;; add flyspell correction to helm
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (define-key flyspell-mode-map (kbd "C-;") 'helm-flyspell-correct)
-(define-key flycheck-mode-map (kbd "C-;") 'helm-flycheck)
+;;(define-key flycheck-mode-map (kbd "C-;") 'helm-flycheck)
 
 (global-set-key "\C-cC-r" 'helm-org-rifle-org-directory)
 (global-set-key "\C-cr" 'helm-org-rifle)
