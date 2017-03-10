@@ -335,7 +335,7 @@
 (setq projectile-mode t)
 
 ;; HELM setup
-(require 'helm "helm")
+(require 'helm)
 (setq helm-ff-transformer-show-only-basename nil
       helm-adaptive-history-file             "~/emacsBackup/.emacs.d/data/helm-history"
       helm-yank-symbol-first                 t
@@ -346,7 +346,6 @@
 (autoload 'helm-descbinds      "helm-descbinds" t)
 (autoload 'helm-eshell-history "helm-eshell"    t)
 (autoload 'helm-esh-pcomplete  "helm-eshell"    t)
-(helm-autoresize-mode t)
 (global-set-key (kbd "C-h a")    #'helm-apropos)
 (global-set-key (kbd "C-h i")    #'helm-info-emacs)
 (global-set-key (kbd "C-h b")    #'helm-descbinds)
@@ -366,7 +365,7 @@
 (global-set-key (kbd "M-s o")   #'helm-swoop)
 (global-set-key (kbd "M-s /")   #'helm-multi-swoop)
 
-(autoload 'helm-config "helm config")
+(require 'helm-config "helm config")
 (helm-mode t)
 (helm-adaptive-mode t)
 
