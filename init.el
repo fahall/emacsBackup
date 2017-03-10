@@ -392,14 +392,37 @@
             (define-key org-mode-map (kbd "C-x c o h") #'helm-org-headlines)))
 
 (require 'helm-flyspell)
+(require 'flycheck)
 ;; add flyspell correction to helm
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (define-key flyspell-mode-map (kbd "C-;") 'helm-flyspell-correct)
-;;(define-key flycheck-mode-map (kbd "C-;") 'helm-flycheck)
+(define-key flycheck-mode-map (kbd "C-;") 'helm-flycheck)
 
 (global-set-key "\C-cC-r" 'helm-org-rifle-org-directory)
 (global-set-key "\C-cr" 'helm-org-rifle)
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
+
+(setq helm-split-window-in-side-p t ;; open helm buffer inside current window, not occupy whole other window
+
+      helm-echo-input-in-header-line t) ;; input close to where I type
+
+(defun spacemacs//helm-hide-minibuffer-maybe ()
+  "Hide minibuffer in Helm session if we use the header line as input field."
+  (when (with-helm-buffer helm-echo-input-in-header-line)
+    (let ((ov (make-overlay (point-min) (point-max) nil nil t)))
+      (overlay-put ov 'window (selected-window))
+      (overlay-put ov 'face
+                   (let ((bg-color (face-background 'default nil)))
+                     `(:background ,bg-color :foreground ,bg-color)))
+      (setq-local cursor-type nil))))
+
+(add-hook 'helm-minibuffer-set-up-hook
+      'spacemacs//helm-hide-minibuffer-maybe)
+
+(setq helm-autoresize-max-height 0)
+(setq helm-autoresize-min-height 20)
+(helm-autoresize-mode 1)
+
 ;; End helm setup
 
 ;; Adapted From Better Defaults.el
@@ -646,25 +669,4 @@ of change will be 23:59 on that day"
 (require 'wc-mode)
 
 
-
-(setq helm-split-window-in-side-p t ;; open helm buffer inside current window, not occupy whole other window
-
-      helm-echo-input-in-header-line t) ;; input close to where I type
-
-(defun spacemacs//helm-hide-minibuffer-maybe ()
-  "Hide minibuffer in Helm session if we use the header line as input field."
-  (when (with-helm-buffer helm-echo-input-in-header-line)
-    (let ((ov (make-overlay (point-min) (point-max) nil nil t)))
-      (overlay-put ov 'window (selected-window))
-      (overlay-put ov 'face
-                   (let ((bg-color (face-background 'default nil)))
-                     `(:background ,bg-color :foreground ,bg-color)))
-      (setq-local cursor-type nil))))
-
-(add-hook 'helm-minibuffer-set-up-hook
-      'spacemacs//helm-hide-minibuffer-maybe)
-
-(setq helm-autoresize-max-height 0)
-(setq helm-autoresize-min-height 20)
-(helm-autoresize-mode 1)
 (provide 'init)
