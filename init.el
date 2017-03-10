@@ -346,6 +346,7 @@
 (autoload 'helm-descbinds      "helm-descbinds" t)
 (autoload 'helm-eshell-history "helm-eshell"    t)
 (autoload 'helm-esh-pcomplete  "helm-eshell"    t)
+(helm-autoresize-mode t)
 (global-set-key (kbd "C-h a")    #'helm-apropos)
 (global-set-key (kbd "C-h i")    #'helm-info-emacs)
 (global-set-key (kbd "C-h b")    #'helm-descbinds)
@@ -375,7 +376,7 @@
 
 (global-set-key (kbd "M-s s")   #'helm-ag)
 
-(require 'helm-projectile)
+(autoload 'helm-projectile "helm projectile")
 (setq helm-projectile-sources-list (cons 'helm-source-projectile-files-list
                                          (remove 'helm-source-projectile-files-list 
                                               helm-projectile-sources-list)))
@@ -390,8 +391,8 @@
           (lambda ()
             (define-key org-mode-map (kbd "C-x c o h") #'helm-org-headlines)))
 
-(require 'helm-flyspell )
-(require 'flycheck )
+(autoload 'helm-flyspell "helm-flyspell")
+(autoload 'flycheck "flycheck")
 ;; add flyspell correction to helm
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (define-key flyspell-mode-map (kbd "C-;") 'helm-flyspell-correct)
