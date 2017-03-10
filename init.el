@@ -210,7 +210,7 @@
 
 ;;iPython Notebook
  (autoload 'ein "ein")
-(require 'python-django) 
+(autoload 'python-django "python-django") 
 ;; enable autopep8 formatting on save
 (require 'py-autopep8)
 (add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
