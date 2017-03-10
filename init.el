@@ -391,7 +391,7 @@
           (lambda ()
             (define-key org-mode-map (kbd "C-x c o h") #'helm-org-headlines)))
 
-(autoload 'helm-flyspell "helm-flyspell")
+(require 'helm-flyspell "helm-flyspell")
 (autoload 'flycheck "flycheck")
 ;; add flyspell correction to helm
 (add-hook 'after-init-hook #'global-flycheck-mode)
