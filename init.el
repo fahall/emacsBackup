@@ -493,11 +493,11 @@
             (org-indent-mode t))
           t)
 (add-hook 'org-mode-hook 'visual-line-mode)
+(add-hook 'org-mode-hook 'wc-mode)
 (add-hook 'org-agenda-mode-hook
           (lambda ()
             (visual-line-mode -1)
             (toggle-truncate-lines 1)))
-
 
 
 (setq org-agenda-custom-commands
@@ -617,24 +617,25 @@ of change will be 23:59 on that day"
 ;;(require 'org-mobile-sync)
 ;;(org-mobile-sync-mode 1)
 
+;; additional org settingss
+(require 'helm-org-rifle)
 
-;; run org functions on save
-(add-hook 'org-mode-hook
-          (lambda()
-            (add-hook 'write-contents-functions
-                      (lambda()
-                        (save-excursion
-                          (org-wunderlist-fetch)))))
-          )
+
 (defun my-python-mode-hook () 
   (rainbow-mode 1)
   )
 
-(defun automatic-org-syncing ()
-  (interactive)
-  (org-mobile-pull)
-  (org-mobile-push)
-  (org-wunderlist-fetch)
-  (org-wunderlist-post-all)
-  )
+(global-set-key "\C-cC-r" 'helm-org-rifle-org-directory)
+(global-set-key "\C-cr" 'helm-org-rifle)
+
+(add-to-list 'org-tag-alist '("TOC" . ?T))
+(require 'wc-mode)
+
+(require 'helm-flyspell)
+;; add flyspell correction to helm
+(add-hook 'after-init-hook #'global-flycheck-mode)
+(define-key flyspell-mode-map (kbd "C-;") 'helm-flyspell-correct)
+(define-key flycheck-mode-map (kbd "C-;") 'helm-flycheck)
+
+(provide 'init)
 
