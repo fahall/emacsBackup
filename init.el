@@ -1,4 +1,4 @@
-equi;-------;
+;-------;
 ; REPO  ;
 ;-------;
 (require 'package)
