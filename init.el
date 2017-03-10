@@ -176,8 +176,8 @@
 ;;Set up autocomplete
 
 ;;Autocomplete Config
-  (autoload 'auto-complete "autocomplete")
- (autoload 'auto-complete-config "autocomplete config")
+(require 'auto-complete)
+ (require 'auto-complete-config)
  (ac-config-default)
  (global-auto-complete-mode t)
 
@@ -205,19 +205,19 @@
 (setq jedi:complete-on-dot t)
 
 
-(autoload 'py-isort "python isort")
+(require 'py-isort)
 (add-hook 'before-save-hook 'py-isort-before-save)
 
 ;;iPython Notebook
  (autoload 'ein "ein")
-(autoload 'python-django "python-django") 
+(require 'python-django) 
 ;; enable autopep8 formatting on save
-(autoload 'py-autopep8 "autopep8")
+(require 'py-autopep8 "autopep8")
 (add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
 
 
 
-(autoload 'cc-mode "cc-mode")
+(require 'cc-mode "cc-mode")
 
 
 ;; AucTeX
@@ -251,7 +251,7 @@
     
 
  ;;Markdown Mode
-    (autoload 'markdown-mode "markdown-mode"
+    (require 'markdown-mode "markdown-mode"
        "Major mode for editing Markdown files" t)
     (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
     (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
@@ -438,7 +438,7 @@
   (when (fboundp 'horizontal-scroll-bar-mode)
     (horizontal-scroll-bar-mode -1))
 
-  (autoload 'zap-up-to-char "misc"
+  (require 'zap-up-to-char "misc"
     "Kill up to, but not including ARGth occurrence of CHAR." t)
 
   (require 'uniquify "uniquify")
