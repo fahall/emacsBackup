@@ -212,12 +212,12 @@
  (autoload 'ein "ein")
 (require 'python-django) 
 ;; enable autopep8 formatting on save
-(require 'py-autopep8 "autopep8")
+(require 'py-autopep8)
 (add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
 
 
 
-(require 'cc-mode "cc-mode")
+(require 'cc-mode)
 
 
 ;; AucTeX
@@ -251,7 +251,7 @@
     
 
  ;;Markdown Mode
-    (require 'markdown-mode "markdown-mode"
+    (autoload 'markdown-mode "markdown-mode"
        "Major mode for editing Markdown files" t)
     (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
     (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
@@ -438,7 +438,7 @@
   (when (fboundp 'horizontal-scroll-bar-mode)
     (horizontal-scroll-bar-mode -1))
 
-  (require 'zap-up-to-char "misc"
+  (autoload 'zap-up-to-char "misc"
     "Kill up to, but not including ARGth occurrence of CHAR." t)
 
   (require 'uniquify )
@@ -474,7 +474,7 @@
 
 
 ;; Setup magit
-(require 'magit-status "magit" nil t)
+(autoload 'magit-status "magit" nil t)
 (global-set-key (kbd "C-x g") 'magit-status)
 
 
