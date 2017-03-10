@@ -365,7 +365,7 @@
 (global-set-key (kbd "M-s o")   #'helm-swoop)
 (global-set-key (kbd "M-s /")   #'helm-multi-swoop)
 
-(require 'helm-config "helm config")
+(require 'helm-config)
 (helm-mode t)
 (helm-adaptive-mode t)
 
@@ -390,8 +390,8 @@
           (lambda ()
             (define-key org-mode-map (kbd "C-x c o h") #'helm-org-headlines)))
 
-(require 'helm-flyspell "helm-flyspell")
-(autoload 'flycheck "flycheck")
+(require 'helm-flyspell )
+(require 'flycheck )
 ;; add flyspell correction to helm
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (define-key flyspell-mode-map (kbd "C-;") 'helm-flyspell-correct)
