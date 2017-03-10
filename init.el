@@ -1,4 +1,4 @@
-;-------;
+equi;-------;
 ; REPO  ;
 ;-------;
 (require 'package)
@@ -72,7 +72,7 @@
  (load "help-fns+.el")
 
  ;; Turn on Whitespace Mode
- (require 'whitespace)
+ (autoload 'whitespace)
  (setq whitespace-style '(face lines-tail))
 (global-whitespace-mode t)
 (setq whitespace-global-modes '(c-mode c++-mode cuda-mode web-mode python-mode php-mode))
@@ -110,7 +110,7 @@
  ;;Set up Web-Mode for syntax highlighting
 
  (add-to-list 'load-path "~/emacsBackup/.emacs.d/syntax-modes/")
-(require 'web-mode)
+(autoload 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
@@ -176,8 +176,8 @@
 ;;Set up autocomplete
 
 ;;Autocomplete Config
-  (require 'auto-complete)
- (require 'auto-complete-config)
+  (autoload 'auto-complete)
+ (autoload 'auto-complete-config)
  (ac-config-default)
  (global-auto-complete-mode t)
 
@@ -205,19 +205,19 @@
 (setq jedi:complete-on-dot t)
 
 
-(require 'py-isort)
+(autoload 'py-isort)
 (add-hook 'before-save-hook 'py-isort-before-save)
 
 ;;iPython Notebook
  (autoload 'ein "ein")
 (autoload 'python-django "python-django") 
 ;; enable autopep8 formatting on save
-(require 'py-autopep8)
+(autoload 'py-autopep8)
 (add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
 
 
 
-(require 'cc-mode)
+(autoload 'cc-mode)
 
 
 ;; AucTeX
@@ -335,7 +335,7 @@
 (setq projectile-mode t)
 
 ;; HELM setup
-(require 'helm)
+(autoload 'helm)
 (setq helm-ff-transformer-show-only-basename nil
       helm-adaptive-history-file             "~/emacsBackup/.emacs.d/data/helm-history"
       helm-yank-symbol-first                 t
@@ -366,7 +366,7 @@
 (global-set-key (kbd "M-s o")   #'helm-swoop)
 (global-set-key (kbd "M-s /")   #'helm-multi-swoop)
 
-(require 'helm-config)
+(autoload 'helm-config)
 (helm-mode t)
 (helm-adaptive-mode t)
 
@@ -376,7 +376,7 @@
 
 (global-set-key (kbd "M-s s")   #'helm-ag)
 
-(require 'helm-projectile)
+(autoload 'helm-projectile)
 (setq helm-projectile-sources-list (cons 'helm-source-projectile-files-list
                                          (remove 'helm-source-projectile-files-list 
                                               helm-projectile-sources-list)))
@@ -391,8 +391,8 @@
           (lambda ()
             (define-key org-mode-map (kbd "C-x c o h") #'helm-org-headlines)))
 
-(require 'helm-flyspell)
-(require 'flycheck)
+(autoload 'helm-flyspell)
+(autoload 'flycheck)
 ;; add flyspell correction to helm
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (define-key flyspell-mode-map (kbd "C-;") 'helm-flyspell-correct)
@@ -441,10 +441,10 @@
   (autoload 'zap-up-to-char "misc"
     "Kill up to, but not including ARGth occurrence of CHAR." t)
 
-  (require 'uniquify)
+  (autoload 'uniquify)
   (setq uniquify-buffer-name-style 'forward)
 
-  (require 'saveplace)
+  (autoload 'saveplace)
   (setq-default save-place t)
 
   (global-set-key (kbd "M-/") 'hippie-expand)
@@ -598,7 +598,7 @@
     (tags priority-down category-keep)
     (search category-keep))))
 
-(require 'org-wunderlist)
+(autoload 'org-wunderlist)
 (setq org-wunderlist-client-id "aae80f661b848468d6f9"
       org-wunderlist-token "c463911f3592a80ae4a7e70a0bda6404a9a50fceb23a608a64756d64de1f"
       org-wunderlist-file  "~/Dropbox/org/Wunderlist.org"
@@ -657,7 +657,7 @@ of change will be 23:59 on that day"
 ;;(org-mobile-sync-mode 1)
 
 ;; additional org settingss
-(require 'helm-org-rifle)
+(autoload 'helm-org-rifle)
 
 
 (defun my-python-mode-hook () 
@@ -666,7 +666,7 @@ of change will be 23:59 on that day"
 
 
 (add-to-list 'org-tag-alist '("TOC" . ?T))
-(require 'wc-mode)
+(autoload 'wc-mode)
 
 
 (provide 'init)
