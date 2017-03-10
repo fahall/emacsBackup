@@ -110,7 +110,7 @@
  ;;Set up Web-Mode for syntax highlighting
 
  (add-to-list 'load-path "~/emacsBackup/.emacs.d/syntax-modes/")
-(autoload 'web-mode)
+(autoload 'web-mode "web mode")
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
@@ -176,8 +176,8 @@
 ;;Set up autocomplete
 
 ;;Autocomplete Config
-  (autoload 'auto-complete)
- (autoload 'auto-complete-config)
+  (autoload 'auto-complete "autocomplete")
+ (autoload 'auto-complete-config "autocomplete config")
  (ac-config-default)
  (global-auto-complete-mode t)
 
@@ -205,19 +205,19 @@
 (setq jedi:complete-on-dot t)
 
 
-(autoload 'py-isort)
+(autoload 'py-isort "python isort")
 (add-hook 'before-save-hook 'py-isort-before-save)
 
 ;;iPython Notebook
  (autoload 'ein "ein")
 (autoload 'python-django "python-django") 
 ;; enable autopep8 formatting on save
-(autoload 'py-autopep8)
+(autoload 'py-autopep8 "autopep8")
 (add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
 
 
 
-(autoload 'cc-mode)
+(autoload 'cc-mode "cc-mode")
 
 
 ;; AucTeX
@@ -335,7 +335,7 @@
 (setq projectile-mode t)
 
 ;; HELM setup
-(autoload 'helm)
+(autoload 'helm "helm")
 (setq helm-ff-transformer-show-only-basename nil
       helm-adaptive-history-file             "~/emacsBackup/.emacs.d/data/helm-history"
       helm-yank-symbol-first                 t
@@ -366,7 +366,7 @@
 (global-set-key (kbd "M-s o")   #'helm-swoop)
 (global-set-key (kbd "M-s /")   #'helm-multi-swoop)
 
-(autoload 'helm-config)
+(autoload 'helm-config "helm config")
 (helm-mode t)
 (helm-adaptive-mode t)
 
