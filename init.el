@@ -594,17 +594,6 @@
                     toc-org
                     org-wunderlist
                     org-irc))
-;;                    org-drill
-;;                    org-jsinfo
-;;                    org-annotate-file
-;;                    org-eval
-;;                    org-expiry
-;;                    org-interactive-query
-;;                    org-man
-;;                    org-collector
-;;                    org-panel
-;;                    org-screen
-;;                    org-toc))
 
 (eval-after-load 'org
  '(org-load-modules-maybe t))
@@ -639,9 +628,10 @@ of change will be 23:59 on that day"
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
 (setq default-buffer-file-coding-system 'utf-8)
-;; turn on mobile org auto syncing.
-(require 'org-mobile-sync)
-(org-mobile-sync-mode 1)
+
+;; turn on mobile org auto syncing. doesn't work with osx yet.
+;;(require 'org-mobile-sync)
+;;(org-mobile-sync-mode 1)
 
 ;; additional org settingss
 (require 'helm-org-rifle)
