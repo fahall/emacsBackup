@@ -72,7 +72,7 @@
  (load "help-fns+.el")
 
  ;; Turn on Whitespace Mode
- (autoload 'whitespace)
+ (autoload 'whitespace "whitespace")
  (setq whitespace-style '(face lines-tail))
 (global-whitespace-mode t)
 (setq whitespace-global-modes '(c-mode c++-mode cuda-mode web-mode python-mode php-mode))
@@ -666,7 +666,7 @@ of change will be 23:59 on that day"
 
 
 (add-to-list 'org-tag-alist '("TOC" . ?T))
-(autoload 'wc-mode)
+(autoload 'wc-mode "word count mode")
 
 
 (provide 'init)
