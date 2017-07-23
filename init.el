@@ -2,7 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 (add-to-list 'load-path "~/emacsBackup/alex_customizations/")
-(load "my_package_management.elc" ) ;; MUST LOAD FIRST
+(load "my_package_management.el" ) ;; MUST LOAD FIRST
 
 
 (require 'org-dotemacs)
