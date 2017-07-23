@@ -6,8 +6,8 @@
 
 
 (require 'org-dotemacs)
-(setq org-dotemacs-default-file "~/emacsBackup/alex_customizations/.dotemacs.org")
-(org-dotemacs-load-default)
+#(setq org-dotemacs-default-file "~/emacsBackup/alex_customizations/.dotemacs.org")
+#(org-dotemacs-load-default)
 
 
 (provide 'init)
