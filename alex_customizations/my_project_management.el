@@ -1,0 +1,1 @@
+(setq projectile-mode t)
