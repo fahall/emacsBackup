@@ -2,7 +2,6 @@
 ;;; Commentary: This master file calls subcomponents in the alex_customizations directory
 ;;; Code:
 (add-to-list 'load-path "~/emacsBackup/alex_customizations/")
-(add-to-list 'load-path "~/emacsBackup/.emacs.d/")
 (load "my_package_management.el" ) ;; MUST LOAD FIRST
 (load "my_basics")
 (load "my_window_management")
