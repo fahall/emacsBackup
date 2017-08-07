@@ -9,7 +9,7 @@
 
 
 ;; Enable line numbers in all files. 
- (global-linum-mode 1)
+;; (global-linum-mode 1)
 
 ;; Hide splash screen & banner
 (setq inhibit-startup-message t
