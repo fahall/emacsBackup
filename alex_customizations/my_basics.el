@@ -25,7 +25,7 @@
 ;; Theme must be stored in "~/emacsBackup/.emacs.d/themes"
 ;; Theme available @ wikemacs.org/wiki/Zenburn-theme
 (add-to-list 'custom-theme-load-path "~/emacsBackup/.emacs.d/themes/")
-(load-theme 'zenburn t)
+;; (load-theme 'zenburn t)
 
 ;; Start with subword mode on
 ;; easier navigation of camelCase

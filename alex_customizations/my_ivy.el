@@ -36,3 +36,6 @@
 (global-set-key (kbd "M-x") #'counsel-M-x)
 (global-set-key (kbd "C-x C-r") #'counsel-recentf)
 (global-set-key (kbd "C-x b")   #'ivy-switch-buffer)
+(setq ivy-re-builders-alist '((t . ivy--regex-fuzzy)))
+
+
