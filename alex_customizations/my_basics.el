@@ -126,3 +126,9 @@
       save-place-file (concat user-emacs-directory "places")
       backup-directory-alist `(("." . ,(concat user-emacs-directory
                                                "backups"))))
+
+;; use tramp to upgrade to sudo
+(defun sudired ()
+  (interactive)
+  (dired "/sudo::/"))
+

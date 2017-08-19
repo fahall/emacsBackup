@@ -171,7 +171,5 @@ of change will be 23:59 on that day"
 ;;(require 'org-mobile-sync)
 ;;(org-mobile-sync-mode 1)
 
-;; My custom creative writing file format
-(add-to-list 'auto-mode-alist '("\\.ink$" . org-mode))
 
 (provide 'my_org_settings)
