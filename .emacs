@@ -27,6 +27,9 @@
  '(fci-rule-color "#383838")
  '(flycheck-color-mode-line-face-to-color (quote mode-line-buffer-id))
  '(foreground-color "#839496")
+ '(package-selected-packages
+   (quote
+	(wc-mode use-package undo-tree toc-org tidy smex scss-mode rainbow-mode python-django py-isort py-autopep8 pretty-lambdada powerline popup-complete php-mode phi-rectangle org-wunderlist org-wc org-ref org-mobile-sync org-dotemacs multiple-cursors mode-icons matlab-mode markdown-mode+ magit json-rpc jedi-direx flycheck flx exec-path-from-shell es-lib elpy ein ecb cuda-mode counsel-projectile autopair auto-complete-clang auctex anaconda-mode ac-html ac-helm ac-clang)))
  '(safe-local-variable-values
    (quote
 	((TeX-master . t)

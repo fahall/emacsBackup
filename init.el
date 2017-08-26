@@ -13,39 +13,8 @@
 (load "my_project_management")
 (load "my_version_control")
 (load "my_sandbox")
-;;(load "ink_mode")
+(load "ink_mode")
 
 
 (provide 'init)
 ;;; init.el ends here
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
