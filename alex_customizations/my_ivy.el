@@ -18,6 +18,9 @@
 	;; allow input not in order
         '((t   . ivy--regex-ignore-order))))
 
+(setq ivy-re-builders-alist
+      '((ivy-switch-buffer . ivy--regex-plus)
+        (t . ivy--regex-fuzzy)))
 
 (global-set-key (kbd "C-s") 'swiper)
 (global-set-key (kbd "M-x") 'counsel-M-x)
