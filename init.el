@@ -15,6 +15,5 @@
 (load "my_sandbox")
 (load "ink_mode")
 
-
 (provide 'init)
 ;;; init.el ends here
