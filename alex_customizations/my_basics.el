@@ -15,6 +15,9 @@
 (setq inhibit-startup-message t
       inhibit-startup-echo-area-message t)  
 
+;; Do not create new frame if one exists when opening file. 
+(setq ns-pop-up-frames nil)
+
 ;; Enable auto-indenting
 (define-key global-map (kbd "RET") 'newline-and-indent)
 
