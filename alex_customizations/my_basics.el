@@ -6,8 +6,6 @@
 ;;tell tramp to use ssh
 (setq tramp-default-method "ssh")
 
-
-
 ;; Enable line numbers in all files. 
 ;; (global-linum-mode 1)
 
