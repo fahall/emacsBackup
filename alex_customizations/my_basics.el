@@ -133,3 +133,14 @@
   (interactive)
   (dired "/sudo::/"))
 
+
+
+;; Raise garbage collection threshold when minibuffer open
+(defun my-minibuffer-setup-hook ()
+  (setq gc-cons-threshold most-positive-fixnum))
+;; Return garbage collection back to normal after exiting minibuffer
+(defun my-minibuffer-exit-hook ()
+  (setq gc-cons-threshold 16777216))
+
+(add-hook 'minibuffer-setup-hook #'my-minibuffer-setup-hook)
+(add-hook 'minibuffer-exit-hook #'my-minibuffer-exit-hook)
