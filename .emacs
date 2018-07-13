@@ -1,4 +1,13 @@
 
+
+
+
+;; Provide more memory at startup to avoid garbage collection
+;; MUST RESET [SEE: Reset Memory @ end of file]
+(setq gc-cons-threshold 402653184
+      gc-cons-percentage 0.6)
+
+
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
@@ -29,7 +38,7 @@
  '(foreground-color "#839496")
  '(package-selected-packages
    (quote
-	(paradox company-irony company-irony-c-headers company-web csharp-mode company-jedi company-lua omnisharp haskell-mode flycheck-rust rust-mode go-mode wc-mode use-package undo-tree toc-org tidy smex scss-mode rainbow-mode python-django py-isort py-autopep8 pretty-lambdada powerline php-mode phi-rectangle org-wunderlist org-wc org-ref org-mobile-sync org-dotemacs multiple-cursors mode-icons matlab-mode markdown-mode+ magit json-rpc jedi-direx flycheck flx exec-path-from-shell es-lib elpy ein ecb cuda-mode counsel-projectile autopair auctex anaconda-mode)))
+	(rustic paradox company-irony company-irony-c-headers company-web csharp-mode company-jedi company-lua omnisharp haskell-mode flycheck-rust go-mode wc-mode use-package undo-tree toc-org tidy smex scss-mode rainbow-mode python-django py-isort py-autopep8 pretty-lambdada powerline php-mode phi-rectangle org-wunderlist org-wc org-ref org-mobile-sync org-dotemacs multiple-cursors mode-icons matlab-mode markdown-mode+ magit json-rpc jedi-direx flycheck flx exec-path-from-shell es-lib elpy ein ecb cuda-mode counsel-projectile autopair auctex anaconda-mode)))
  '(paradox-github-token t)
  '(safe-local-variable-values
    (quote
@@ -64,4 +73,8 @@
  ;; If there is more than one, they won't work right.
  )
 
-
+;; Reset Memory
+;; Must do this if using extra mem @ startup trick.
+(add-hook 'emacs-startup-hook (lambda ()
+								(setq gc-cons-threshold 16777216
+									  gc-cons-percentage 0.1)))
