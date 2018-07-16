@@ -64,3 +64,24 @@
 (smartscan-mode 1)
 (add-to-list 'load-path "~/emacsBackup/.emacs.d/general-tools/")
 
+
+(autoload 'company-bibtex "company-bibtex")
+(add-to-list 'company-backends 'company-bibtex)
+(autoload 'company-auctex "company-auctex")
+(company-auctex-init)
+
+
+;; Download & build `glslangValidator' from KhronosGroup:
+;; https://github.com/KhronosGroup/glslang
+
+(use-package company-glsl
+  :config
+  (when (executable-find "glslangValidator")
+    (add-to-list 'company-backends 'company-glsl)))
+
+(add-to-list 'company-backends 'company-ghc)
+
+
+(add-hook 'after-init-hook #'company-statistics-mode)
+
+

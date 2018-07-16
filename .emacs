@@ -37,7 +37,7 @@
  '(foreground-color "#839496")
  '(package-selected-packages
    (quote
-	(rustic paradox company-irony company-irony-c-headers company-web csharp-mode company-jedi company-lua omnisharp haskell-mode flycheck-rust go-mode wc-mode use-package undo-tree toc-org tidy smex scss-mode rainbow-mode python-django py-isort py-autopep8 pretty-lambdada powerline php-mode phi-rectangle org-wunderlist org-wc org-ref org-mobile-sync org-dotemacs multiple-cursors mode-icons matlab-mode markdown-mode+ magit json-rpc jedi-direx flycheck flx exec-path-from-shell es-lib elpy ein ecb cuda-mode counsel-projectile autopair auctex anaconda-mode)))
+	(deadgrep docker-compose-mode dockerfile-mode company-statistics company-auctex company-bibtex company-ghc company-glsl rustic paradox company-irony company-irony-c-headers company-web csharp-mode company-jedi company-lua omnisharp haskell-mode flycheck-rust go-mode wc-mode use-package undo-tree toc-org tidy smex scss-mode rainbow-mode python-django py-isort py-autopep8 pretty-lambdada powerline php-mode phi-rectangle org-wunderlist org-wc org-ref org-mobile-sync org-dotemacs multiple-cursors mode-icons matlab-mode markdown-mode+ magit json-rpc jedi-direx flycheck flx exec-path-from-shell es-lib elpy ein ecb cuda-mode counsel-projectile autopair auctex anaconda-mode)))
  '(paradox-github-token t)
  '(safe-local-variable-values
    (quote
