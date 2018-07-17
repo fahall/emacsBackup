@@ -28,7 +28,7 @@
 
   (setq indent-tabs-mode nil)
   (setq c-syntactic-indentation t)
-  (c-set-style "ellemtel")
+  (c-set-style "stroustrup")
   (setq c-basic-offset 4)
   (setq truncate-lines t)
   (setq tab-width 4)
@@ -37,13 +37,10 @@
   ;csharp-mode README.md recommends this too
   ;(electric-pair-mode 1)       ;; Emacs 24
   (electric-pair-local-mode 1) ;; Emacs 25
-  (add-hook 'before-save-hook
-      (lambda()
-        (save-excursion
-          (omnisharp-format-buffer-on-save)
-      nil t)))
   (local-set-key (kbd "C-c r r") 'omnisharp-run-code-action-refactoring)
-  (local-set-key (kbd "C-c C-c") 'recompile))
+  (local-set-key (kbd "C-c C-c") 'recompile)
+  (setq-local 'omnisharp-format-on-keystroke t)
+  )
 
 
   (add-hook 'csharp-mode-hook 'my-csharp-mode-setup t)

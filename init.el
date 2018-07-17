@@ -1,6 +1,9 @@
 ;;; init.el --- my initialization file
 ;;; Commentary: This master file calls subcomponents in the alex_customizations directory
 ;;; Code:
+(require 'server)
+(unless (server-running-p)
+  (server-start)) 
 (add-to-list 'load-path "~/emacsBackup/alex_customizations/")
 (load "my_package_management.el" ) ;; MUST LOAD FIRST
 (load "my_basics")
