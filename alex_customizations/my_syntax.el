@@ -108,3 +108,10 @@
 (setq TeX-view-program-selection '((output-pdf "PDF Viewer")))
 (setq TeX-view-program-list
       '(("PDF Viewer" "/Applications/Skim.app/Contents/SharedSupport/displayline -b -g %n %o %b")))
+
+
+(autoload 'dockerfile-mode "dockerfile-mode")
+(add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
+
+(autoload 'docker-compose-mode "docker-compose-mode")
+(add-to-list 'auto-mode-alist '("\\compose.yaml\\'" . docker-compose-mode))
