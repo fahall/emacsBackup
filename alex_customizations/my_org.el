@@ -53,6 +53,20 @@
 		 :empty-lines 1    ; properties
 		 :created t        ; properties
 		 )
+		("d" "Chaos Frontier - Idea" entry (file+headline "~/Dropbox/org/chaos_frontier.org" "Ideas")
+		 "* IDEA [#B] %? :%^{Tags}:gamedev:chaos_frontier:\n:Created: %U\n"  ; template
+		 :prepend t        ; properties
+		 :empty-lines 1    ; properties
+		 :created t        ; properties
+		 )
+		("c" "Chaos Frontier - Task" entry (file+headline "~/Dropbox/org/chaos_frontier.org" "Tasks")
+		 "* TODO [#B] %? :%^{Tags}:gamedev:chaos_frontier:\n:Created: %U\n"  ; template
+		 :prepend t        ; properties
+		 :empty-lines 1    ; properties
+		 :created t        ; properties
+		 )
+
+
 		))
 
 (add-hook 'org-mode-hook
