@@ -1,3 +1,18 @@
+;; Where are global org files?
+
+(defvar org-root-directory  "~/Dropbox/org"
+  "Path to directory containing global org files used in generating agenda."
+  )
+
+(if (string-equal system-type "windows-nt")
+  ;; then
+  (setq org-root-directory "H:/Dropbox/org")
+  ;; else
+  (setq org-root-directory "~/Dropbox/org")
+  )
+
+
+
 ;;SET UP ORG MODE
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 
@@ -13,7 +28,7 @@
 (setq org-log-done t)
 
 ;;file to save todo items
-(setq org-agenda-files (quote ("~/Dropbox/org/")))
+(setq org-agenda-files (list org-root-directory))
 
 ;;set priority range from A to C with default A
 (setq org-highest-priority ?A)
@@ -30,36 +45,50 @@
 
 ;;capture todo items using C-c c t
 (define-key global-map (kbd "C-c c") 'org-capture)
+
+
+(defun joindirs (root &rest dirs)
+  "Joins a series of directories together, like Python's os.path.join,
+  (dotemacs-joindirs \"/tmp\" \"a\" \"b\" \"c\") => /tmp/a/b/c"
+
+  (if (not dirs)
+      root
+    (apply 'joindirs
+           (expand-file-name (car dirs) root)
+           (cdr dirs))))
+
+
+
 (setq org-capture-templates
-      '(("t" "Todo" entry (file "~/Dropbox/org/todo.org")
+      '(("t" "Todo" entry (file (joindirs org-root-directory "todo.org"))
 		 "* TODO [#B] %? :%^{Tags}:\n:Created: %U\n"  ; template
 		 :prepend t        ; properties
 		 :empty-lines 1    ; properties
 		 :created t        ; properties
 		 )
-		("j" "Journal" entry (file+datetree "~/Dropbox/org/journal.org")
+		("j" "Journal" entry (file+datetree (joindirs org-root-directory "journal.org") "Entries")
 		 "* %?"
          "* %?\nCreated: %U\n  %i\n  %a"
 		 :empty-lines 1)
-		("n" "Note" entry (file+datetree "~/Dropbox/org/notes.org")
+		("n" "Note" entry (file+datetree (joindirs org-root-directory "notes.org"))
          "* %?\nCreated: %U\n  %i\n  %a"
          :empty-lines 1)
 		("i" "Inbox" entry (file "~/Dropbox/org/inbox.org")
          "* %?\nCreated: %U\n  %i\n  %a"
          :empty-lines 1)
-		("f" "filmgrammar todo" entry (file+headline "~/Dropbox/org/research.org" "Tasks")
+		("f" "filmgrammar todo" entry (file+headline (joindirs org-root-directory "research.org") "Tasks")
 		 "* TODO [#B] %? :%^{Tags}:filmgrammar:ucb:research:code:work:\n:Created: %U\n"  ; template
 		 :prepend t        ; properties
 		 :empty-lines 1    ; properties
 		 :created t        ; properties
 		 )
-		("d" "Chaos Frontier - Idea" entry (file+headline "~/Dropbox/org/chaos_frontier.org" "Ideas")
+		("d" "Chaos Frontier - Idea" entry (file+headline (joindirs org-root-directory "chaos_frontier.org") "Ideas")
 		 "* IDEA [#B] %? :%^{Tags}:gamedev:chaos_frontier:\n:Created: %U\n"  ; template
 		 :prepend t        ; properties
 		 :empty-lines 1    ; properties
 		 :created t        ; properties
 		 )
-		("c" "Chaos Frontier - Task" entry (file+headline "~/Dropbox/org/chaos_frontier.org" "Tasks")
+		("c" "Chaos Frontier - Task" entry (file+headline (joindirs org-root-directory "chaos_frontier.org") "Tasks")
 		 "* TODO [#B] %? :%^{Tags}:gamedev:chaos_frontier:\n:Created: %U\n"  ; template
 		 :prepend t        ; properties
 		 :empty-lines 1    ; properties
@@ -137,8 +166,8 @@
 (autoload 'org-wunderlist "org-wunderlist")
 (setq org-wunderlist-client-id "aae80f661b848468d6f9"
       org-wunderlist-token "c463911f3592a80ae4a7e70a0bda6404a9a50fceb23a608a64756d64de1f"
-      org-wunderlist-file  "~/Dropbox/org/Wunderlist.org"
-      org-wunderlist-dir "~/Dropbox/org/org-wunderlist/")
+      org-wunderlist-file  (joindirs org-root-directory "Wunderlist.org")
+      org-wunderlist-dir (joindirs org-root-directory "org-wunderlist/"))
 
 (setq org-agenda-todo-ignore-scheduled 'future)
 (setq org-agenda-tags-todo-honor-ignore-options t)
@@ -177,7 +206,7 @@ of change will be 23:59 on that day"
 ;; Mobile Org Setup
 (setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
 (setq org-directory "~/Dropbox/org")
-(setq org-mobile-inbox-for-pull "~/Dropbox/org/flagged.org")
+(setq org-mobile-inbox-for-pull (joindirs org-root-directory "flagged.org"))
 (setq org-mobile-use-encryption t)
 (setq org-mobile-encryption-password "qX4yb12TKykaWx2P")
 (setq org-habit-show-habits-only-for-today 1)
