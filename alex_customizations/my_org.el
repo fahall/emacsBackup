@@ -47,48 +47,45 @@
 (define-key global-map (kbd "C-c c") 'org-capture)
 
 
-(defun joindirs (root &rest dirs)
-  "Joins a series of directories together, like Python's os.path.join,
-  (dotemacs-joindirs \"/tmp\" \"a\" \"b\" \"c\") => /tmp/a/b/c"
-
-  (if (not dirs)
-      root
-    (apply 'joindirs
-           (expand-file-name (car dirs) root)
-           (cdr dirs))))
-
+;; org templates
+(let ((default-directory org-root-directory))
+  (setq org-default-notes-file-path (expand-file-name "notes.org"))
+  (setq org-todo-file-path (expand-file-name "todo.org"))
+  (setq org-journal-file-path (expand-file-name "journal.org"))
+  (setq org-frontera-file-path (expand-file-name "frontera.org"))
+  (setq org-research-file-path (expand-file-name "research.org")))
 
 
 (setq org-capture-templates
-      '(("t" "Todo" entry (file (joindirs org-root-directory "todo.org"))
+      '(("t" "Todo" entry (file+headline org-todo-file-path "Todo")
 		 "* TODO [#B] %? :%^{Tags}:\n:Created: %U\n"  ; template
 		 :prepend t        ; properties
 		 :empty-lines 1    ; properties
 		 :created t        ; properties
 		 )
-		("j" "Journal" entry (file+datetree (joindirs org-root-directory "journal.org") "Entries")
+		("j" "Journal" entry (file+datetree org-journal-file-path "Entries")
 		 "* %?"
          "* %?\nCreated: %U\n  %i\n  %a"
 		 :empty-lines 1)
-		("n" "Note" entry (file+datetree (joindirs org-root-directory "notes.org"))
+		("n" "Note" entry (file+datetree org-default-notes-file-path)
          "* %?\nCreated: %U\n  %i\n  %a"
          :empty-lines 1)
 		("i" "Inbox" entry (file "~/Dropbox/org/inbox.org")
          "* %?\nCreated: %U\n  %i\n  %a"
          :empty-lines 1)
-		("f" "filmgrammar todo" entry (file+headline (joindirs org-root-directory "research.org") "Tasks")
+		("f" "filmgrammar todo" entry (file+headline org-research-file-path "Tasks")
 		 "* TODO [#B] %? :%^{Tags}:filmgrammar:ucb:research:code:work:\n:Created: %U\n"  ; template
 		 :prepend t        ; properties
 		 :empty-lines 1    ; properties
 		 :created t        ; properties
 		 )
-		("d" "Chaos Frontier - Idea" entry (file+headline (joindirs org-root-directory "chaos_frontier.org") "Ideas")
+		("d" "Frontera - Idea" entry (file+headline org-frontera-file-path "Ideas")
 		 "* IDEA [#B] %? :%^{Tags}:gamedev:chaos_frontier:\n:Created: %U\n"  ; template
 		 :prepend t        ; properties
 		 :empty-lines 1    ; properties
 		 :created t        ; properties
 		 )
-		("c" "Chaos Frontier - Task" entry (file+headline (joindirs org-root-directory "chaos_frontier.org") "Tasks")
+		("c" "Frontera - Task" entry (file+headline org-frontera-file-path "Tasks")
 		 "* TODO [#B] %? :%^{Tags}:gamedev:chaos_frontier:\n:Created: %U\n"  ; template
 		 :prepend t        ; properties
 		 :empty-lines 1    ; properties
