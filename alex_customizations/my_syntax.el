@@ -57,7 +57,6 @@
 (add-hook 'python-mode-hook 'my-python-mode-hook)
 (defun my-python-mode-hook () 
   (rainbow-mode 1)
-  (elpy-enable)
   (py-autopep8-enable-on-save)
   (jedi:setup)
   (setq jedi:complete-on-dot t)

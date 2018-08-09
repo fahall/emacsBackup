@@ -17,8 +17,9 @@
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 
 ;;Define Default Workflow States
+
 (setq org-todo-keywords
-      '((sequence "TODO" "DONE")))
+  '((sequence "TODO(t)" "WAIT(w@/!)" "|" "DONE(d!)" "CANCELED(c@)")))
 
 ;; set key for agenda
 
@@ -80,13 +81,13 @@
 		 :created t        ; properties
 		 )
 		("d" "Frontera - Idea" entry (file+headline org-frontera-file-path "Ideas")
-		 "* IDEA [#B] %? :%^{Tags}:gamedev:chaos_frontier:\n:Created: %U\n"  ; template
+		 "* IDEA [#B] %? :%^{Tags}:gamedev:frontera:\n:Created: %U\n"  ; template
 		 :prepend t        ; properties
 		 :empty-lines 1    ; properties
 		 :created t        ; properties
 		 )
 		("c" "Frontera - Task" entry (file+headline org-frontera-file-path "Tasks")
-		 "* TODO [#B] %? :%^{Tags}:gamedev:chaos_frontier:\n:Created: %U\n"  ; template
+		 "* TODO [#B] %? :%^{Tags}:gamedev:frontera:\n:Created: %U\n"  ; template
 		 :prepend t        ; properties
 		 :empty-lines 1    ; properties
 		 :created t        ; properties
@@ -139,6 +140,9 @@
         );;end list of custom views
       );end org-agenda-custom-commands call
 
+
+
+
 ;;open agenda in current window
 (setq org-agenda-window-setup (quote current-window))
 ;;warn me of any deadlines in next 7 days
@@ -161,10 +165,16 @@
         (search category-keep))))
 
 (autoload 'org-wunderlist "org-wunderlist")
+
+(let ((default-directory org-root-directory))
+  (setq org-wunderlist-file-path (expand-file-name "Wunderlist.org"))
+  (setq org-wunderlist-subdirectory (expand-file-name "org-wunderlist/"))
+  (setq org-wunderlist-flagged-file-path (expand-file-name "flagged.org")))
+
 (setq org-wunderlist-client-id "aae80f661b848468d6f9"
       org-wunderlist-token "c463911f3592a80ae4a7e70a0bda6404a9a50fceb23a608a64756d64de1f"
-      org-wunderlist-file  (joindirs org-root-directory "Wunderlist.org")
-      org-wunderlist-dir (joindirs org-root-directory "org-wunderlist/"))
+      org-wunderlist-file  org-wunderlist-file-path
+      org-wunderlist-dir org-wunderlist-subdirectory)
 
 (setq org-agenda-todo-ignore-scheduled 'future)
 (setq org-agenda-tags-todo-honor-ignore-options t)
@@ -203,7 +213,7 @@ of change will be 23:59 on that day"
 ;; Mobile Org Setup
 (setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
 (setq org-directory "~/Dropbox/org")
-(setq org-mobile-inbox-for-pull (joindirs org-root-directory "flagged.org"))
+(setq org-mobile-inbox-for-pull org-wunderlist-flagged-file-path)
 (setq org-mobile-use-encryption t)
 (setq org-mobile-encryption-password "qX4yb12TKykaWx2P")
 (setq org-habit-show-habits-only-for-today 1)
