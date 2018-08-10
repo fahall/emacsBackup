@@ -1,0 +1,318 @@
+* Overview
+My emacs configuration file. This is a living document and undergoes frequent changes as I experiment with different emacs configurations and learn new packages and tools. 
+* Setup
+** Start emacs as a daemon for faster boot times.
+#+BEGIN_SRC emacs-lisp
+(require 'server)
+(unless (server-running-p)
+  (server-start)) 
+
+#+END_SRC
+
+** Get PATH from shell on Windows
+I want $PATH to work the same on Windows as it does on *nix systems. 
+#+BEGIN_SRC emacs-lisp
+(defun set-exec-path-from-shell-PATH ()
+  "Sets the exec-path to the same value used by the user shell"
+  (let ((path-from-shell
+         (replace-regexp-in-string
+          "[[:space:]\n]*$" ""
+          (shell-command-to-string "$SHELL -l -c 'echo $PATH'"))))
+    (setenv "PATH" path-from-shell)
+    (setq exec-path (split-string path-from-shell path-separator))))
+ 
+(unless (string-equal system-type "windows-nt") ; Microsoft Windows
+    (set-exec-path-from-shell-PATH))
+#+END_SRC
+
+* Package Management
+** Setup Package Management Package
+Note: Sometimes new emacs installations require running `list-packages` manually before this code will work. 
+
+#+BEGIN_SRC emacs-lisp
+(require 'package)
+(add-to-list 'package-archives
+  '("melpa" . "http://melpa.milkbox.net/packages/") t)
+;;(add-to-list 'package-archives '(("ELPA" . "http://tromey.com/elpa/") 
+  ;;                        ("gnu" . "http://elpa.gnu.org/packages/")
+    ;;                      ("marmalade" . "http://marmalade-repo.org/packages/"))) 
+(package-initialize)
+#+END_SRC
+
+** Install missing packages
+Package list is generated using `C-h v package-activated-list`
+
+#+BEGIN_SRC emacs-lisp
+(mapc
+ (lambda (package)
+   (or (package-installed-p package)
+       (package-install package)))
+       (anaconda-mode counsel deadgrep ein helm ivy magit projectile pythonic swiper yasnippet-snippets ac-clang ac-helm ac-html anaconda-mode auto-complete-clang autopair company-auctex auctex company-bibtex company-ghc company-glsl company-irony company-irony-c-headers company-jedi company-lua company-statistics company-web counsel-projectile counsel cuda-mode deadgrep diminish docker-compose-mode dockerfile-mode ecb ein elpy company es-lib esup exec-path-from-shell find-file-in-project flx flycheck-rust ghc glsl-mode go-mode haskell-mode highlight-indentation irony jedi-direx direx jedi jedi-core epc ctable concurrent json-rpc lua-mode magit git-commit ghub magit-popup markdown-mode+ matlab-mode mode-icons multiple-cursors omnisharp csharp-mode auto-complete flycheck org-dotemacs org-mobile-sync org-ref key-chord helm-bibtex biblio biblio-core helm helm-core htmlize org-wc org-wunderlist org alert log4e gntp paradox hydra parsebib pdf-tools phi-rectangle php-mode popup-complete popup pos-tip powerline py-autopep8 py-isort python-django python-environment pythonic pyvenv rainbow-mode request-deferred request deferred rust-mode rustic markdown-mode projectile pkg-info epl f dash s scss-mode shut-up skewer-mode js2-mode simple-httpd smex spinner swiper ivy tablist toc-org undo-tree use-package bind-key wc-mode web-completion-data websocket with-editor async xterm-color yaml-mode yasnippet))
+
+#+END_SRC
+
+* Basics
+** Map `C`, `M`, and `S` to approximately the same location on MacOS
+#+BEGIN_SRC emacs-lisp
+
+(setq mac-option-modifier 'control)
+(setq mac-command-modifier 'meta)
+(setq mac-control-modifier 'super)
+#+END_SRC
+
+** Setup TRAMP to use ssh
+#+BEGIN_SRC emacs-lisp
+;;tell tramp to use ssh
+(setq tramp-default-method "ssh")
+
+#+END_SRC
+
+** Hide Splash Screen & Banner
+#+BEGIN_SRC emacs-lisp
+
+(setq inhibit-startup-message t
+      inhibit-startup-echo-area-message t)  
+#+END_SRC
+** Opening file does not create new frame if frame unless none exist
+#+BEGIN_SRC emacs-lisp
+(setq ns-pop-up-frames nil)
+#+END_SRC
+** Auto Indent when hitting "RET"
+#+BEGIN_SRC emacs-lisp
+(define-key global-map (kbd "RET") 'newline-and-indent)
+#+END_SRC
+** Add new lines if using `C-n` at end of buffer
+#+BEGIN_SRC emacs-lisp
+(setq next-line-add-newlines t)
+#+END_SRC
+** Make custom themes available
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'custom-theme-load-path "~/emacsBackup/.emacs.d/themes/")
+#+END_SRC
+
+** Enable subword-mode globally
+When using word-forward and word-backwards, break 'words' at Underscores and camelCase capitals
+#+BEGIN_SRC emacs-lisp
+(load "subword.el")
+(global-subword-mode 1)
+#+END_SRC
+
+** Make the mark visible as blinking rectangle
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'load-path "~/emacsBackup/.emacs.d/general-tools/")
+(load "visible-mark.el")
+#+END_SRC
+
+** Automatically cleanup trailing whitespace
+#+BEGIN_SRC emacs-lisp
+(require 'whitespace)
+(setq whitespace-style '(face lines-tail))
+(global-whitespace-mode t)
+(setq whitespace-global-modes '(csharp-mode lua-mode octave-mode c-mode c++-mode cuda-mode web-mode python-mode php-mode))
+#+END_SRC
+
+** Display hex-colors in their color
+#+BEGIN_SRC emacs-lisp
+(setq-default rainbow-mode 1)
+#+END_SRC
+
+** Display tabs as 4 spaces
+#+BEGIN_SRC emacs-lisp
+(setq-default tab-width 4)
+(defvaralias 'c-basic-offset 'tab-width)
+(defvaralias 'cperl-indent-level 'tab-width)
+
+#+END_SRC
+
+** Ignore wrap when moving up/down a line
+#+BEGIN_SRC emacs-lisp
+(setq line-move-visual 'nil)
+#+END_SRC
+
+** Prefer utf-8 encoding
+#+BEGIN_SRC emacs-lisp
+
+(prefer-coding-system       'utf-8)
+(set-default-coding-systems 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(setq buffer-file-coding-system 'utf-8)
+#+END_SRC
+
+** Simple up/down line transposition
+Use `M-up` and `M-down`
+#+BEGIN_SRC emacs-lisp
+(defun move-line-up ()
+  (interactive)
+  (transpose-lines 1)
+  (forward-line -2))
+
+(defun move-line-down ()
+  (interactive)
+  (forward-line 1)
+  (transpose-lines 1)
+  (forward-line -1)
+  )
+
+(global-set-key (kbd "<M-down>") 'move-line-down)
+(global-set-key (kbd "<M-up>") 'move-line-up)
+#+END_SRC
+
+** Disable forward search in minibuffer (DEPRECATED)
+#+BEGIN_SRC emacs-lisp
+;; Disable forward-search in minibuffer
+;; (define-key minibuffer-local-map "\M-s" nil)
+#+END_SRC
+
+** What does this do? again?
+#+BEGIN_SRC emacs-lisp
+
+(require 'flycheck )
+
+(unless (fboundp 'helm-mode)
+  (ido-mode t)
+  (setq ido-enable-flex-matching t))
+
+#+END_SRC
+
+** Hide menu and scrollbars
+Want asmuch screen real estate as possible
+#+BEGIN_SRC emacs-lisp
+(menu-bar-mode -1)
+(when (fboundp 'tool-bar-mode)
+  (tool-bar-mode -1))
+(when (fboundp 'scroll-bar-mode)
+  (scroll-bar-mode -1))
+(when (fboundp 'horizontal-scroll-bar-mode)
+  (horizontal-scroll-bar-mode -1))
+#+END_SRC
+
+** Better zap-to-char
+Kill up to, but not including char
+#+BEGIN_SRC emacs-lisp
+
+(autoload 'zap-up-to-char "misc"
+  "Kill up to, but not including ARGth occurrence of CHAR." t)
+#+END_SRC
+
+** Ensure all buffers have unique names
+#+BEGIN_SRC emacs-lisp
+
+(require 'uniquify )
+(setq uniquify-buffer-name-style 'forward)
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+
+(require 'saveplace)
+(setq-default save-place t)
+#+END_SRC
+
+** Prefer smarter versions of basic commands
+Changes standard keymappings to more robust variants of the same command. 
+
+#+BEGIN_SRC emacs-lisp
+(global-set-key (kbd "M-/") 'hippie-expand)
+(global-set-key (kbd "C-x C-b") 'ibuffer)
+(global-set-key (kbd "M-z") 'zap-up-to-char)
+
+(global-set-key (kbd "C-s") 'isearch-forward-regexp)
+(global-set-key (kbd "C-r") 'isearch-backward-regexp)
+(global-set-key (kbd "C-M-s") 'isearch-forward)
+(global-set-key (kbd "C-M-r") 'isearch-backward)
+#+END_SRC
+
+** Show matching parentheses, brackets, and braces.
+#+BEGIN_SRC emacs-lisp
+
+(show-paren-mode 1)
+
+#+END_SRC
+
+** TODO: Remember what these commands do!
+#+BEGIN_SRC emacs-lisp
+
+
+(setq x-select-enable-clipboard t
+      x-select-enable-primary t
+      save-interprogram-paste-before-kill t
+      apropos-do-all t
+      mouse-yank-at-point t
+      require-final-newline t
+      visible-bell nil
+      load-prefer-newer t
+      ediff-window-setup-function 'ediff-setup-windows-plain
+      save-place-file (concat user-emacs-directory "places")
+      backup-directory-alist `(("." . ,(concat user-emacs-directory
+                                               "backups"))))
+#+END_SRC
+
+** Use tramp to upgrade to sudo
+Without this, a new emacs session must be opened to access files as sudo
+
+Risky to default all emacs to sudo permissions
+#+BEGIN_SRC emacs-lisp
+;; use tramp to upgrade to sudo
+(defun sudired ()
+  (interactive)
+  (dired "/sudo::/"))
+#+END_SRC
+
+** Startup Speed Enhancements
+
+Raise the garbage collection threshold during emacs startup and lower it again once startup complete. Garbage collection during startup can cause significant slowdown.
+
+#+BEGIN_SRC emacs-lisp
+
+;; Raise garbage collection threshold when minibuffer open
+(defun my-minibuffer-setup-hook ()
+  (setq gc-cons-threshold most-positive-fixnum))
+;; Return garbage collection back to normal after exiting minibuffer
+(defun my-minibuffer-exit-hook ()
+  (setq gc-cons-threshold 16777216))
+
+(add-hook 'minibuffer-setup-hook #'my-minibuffer-setup-hook)
+(add-hook 'minibuffer-exit-hook #'my-minibuffer-exit-hook)
+
+#+END_SRC
+
+* Window Management
+** Quickly move between buffers
+On a colemak keyboard, FRST is equivalent to qwerty ESDF. This layout is similar to the common WASD. `M-s` followed by the movement direction on the colemak FRST switches buffer in that direction. 
+
+Note: This layout is only intuitive on colemak. It is not at all intuitive on qwerty. Consider remapping if needed. 
+#+BEGIN_SRC emacs-lisp
+(setq windmove-wrap-around t)
+(global-set-key (kbd "M-s M-f") 'windmove-up)
+(global-set-key (kbd "M-s M-s") 'windmove-down)
+(global-set-key (kbd "M-s M-r") 'windmove-left)
+(global-set-key (kbd "M-s M-t") 'windmove-right)
+(global-set-key (gkbd "M-s M-c") 'other-frame)
+#+END_SRC
+** Create evenly distributed vertical or horizontal windows. 
+Similar to the standard `C-x 2` or `C-x 3`, but balances all windows in that direction. 
+
+#+BEGIN_SRC emacs-lisp
+n(defun split-window-horizontally-balanced ()
+  (interactive)
+  (split-window-horizontally)
+  (balance-windows)
+)
+(defun split-window-vertically-balanced ()
+  (interactive)
+  (split-window-vertically)
+  (balance-windows)
+)
+(global-set-key (kbd "C-c 2") 'split-window-vertically-balanced)
+(global-set-key (kbd "C-c 3") 'split-window-horizontally-balanced)
+#+END_SRC
+* Ivy
+* Syntax Highlighting
+* Org Mode
+* Autocomplete
+* Buffer Navigation
+* Project Management
+* Version Control
+* Snippets
+* Sandbox
+* Ink Mode
