@@ -15,6 +15,7 @@
 (load "my_navigation")
 (load "my_project_management")
 (load "my_version_control")
+(load "my_snippets")
 (load "my_sandbox")
 (load "ink_mode")
 
