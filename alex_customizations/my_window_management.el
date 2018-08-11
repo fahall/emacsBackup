@@ -3,7 +3,7 @@
 (global-set-key (kbd "M-s M-s") 'windmove-down)
 (global-set-key (kbd "M-s M-r") 'windmove-left)
 (global-set-key (kbd "M-s M-t") 'windmove-right)
-(global-set-key (gkbd "M-s M-c") 'other-frame)
+(global-set-key (kbd "M-s M-c") 'other-frame)
 
 
 (defun split-window-horizontally-balanced ()
