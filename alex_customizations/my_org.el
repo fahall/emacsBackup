@@ -21,6 +21,16 @@
 (setq org-todo-keywords
   '((sequence "TODO(t)" "WAIT(w@/!)" "|" "DONE(d!)" "CANCELED(c@)")))
 
+
+(defun org-archive-done-tasks ()
+  (interactive)
+  (org-map-entries
+   (lambda ()
+     (org-archive-subtree)
+     (setq org-map-continue-from (outline-previous-heading)))
+   "/[DONE|CANCELED]" 'agenda))
+
+
 ;; set key for agenda
 
 (define-key global-map "\C-cl" 'org-store-link)
@@ -101,8 +111,6 @@
             (add-to-list 'org-tag-alist '("TOC" . ?T))
             (visual-line-mode t)
             (wc-mode t)
-
-
             )
           t)
 (add-hook 'org-agenda-mode-hook
