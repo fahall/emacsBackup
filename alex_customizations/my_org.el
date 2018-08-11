@@ -28,13 +28,12 @@
 
 (setq org-log-done t)
 
-;;file to save todo items
-(setq org-agenda-files (list org-root-directory))
+(setq org-agenda-files (directory-files org-root-directory t))
 
 ;;set priority range from A to C with default A
 (setq org-highest-priority ?A)
 (setq org-lowest-priority ?C)
-(setq org-default-priority ?A)
+(setq org-default-priority ?B)
 
 ;;set colours for priorities
 (setq org-priority-faces '((?A . (:foreground "#F0DFAF" :weight bold))
