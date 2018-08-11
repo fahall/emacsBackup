@@ -3,7 +3,10 @@
 ;;; Code:
 (require 'server)
 (unless (server-running-p)
-  (server-start)) 
+  (server-start))
+
+;; Ensure port is openened through vpn.
+(setq server-port 12018)
 (add-to-list 'load-path "~/emacsBackup/alex_customizations/")
 (load "my_package_management.el" ) ;; MUST LOAD FIRST
 (load "my_basics")
