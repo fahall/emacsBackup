@@ -16,11 +16,8 @@
   ;; configure regexp engine.
   (setq ivy-re-builders-alist
 	;; allow input not in order
-        '((t   . ivy--regex-ignore-order))))
-
-(setq ivy-re-builders-alist
-      '((ivy-switch-buffer . ivy--regex-plus)
-        (t . ivy--regex-fuzzy)))
+        '((t   . ivy--regex-ignore-order)
+		  (ivy-switch-buffer . ivy--regex-fuzzy))))
 
 (global-set-key (kbd "C-s") 'swiper)
 (global-set-key (kbd "M-x") 'counsel-M-x)
@@ -39,6 +36,5 @@
 (global-set-key (kbd "M-x") #'counsel-M-x)
 (global-set-key (kbd "C-x C-r") #'counsel-recentf)
 (global-set-key (kbd "C-x b")   #'ivy-switch-buffer)
-(setq ivy-re-builders-alist '((t . ivy--regex-fuzzy)))
 
 
