@@ -16,6 +16,17 @@
 ;;SET UP ORG MODE
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 
+(let ((default-directory org-root-directory))
+  (setq org-agenda-files (list (expand-file-name "todo.org")
+							   (expand-file-name "notes.org")
+							   (expand-file-name "journal.org")
+							   (expand-file-name "research.org")
+							   (expand-file-name "Wunderlist.org")
+							   (expand-file-name "inbox.org")
+							   (expand-file-name "frontera.org"))))
+						  
+
+
 ;;Define Default Workflow States
 
 (setq org-todo-keywords
@@ -37,8 +48,6 @@
 (global-set-key (kbd "C-c a") 'org-agenda)
 
 (setq org-log-done t)
-
-(setq org-agenda-files (directory-files org-root-directory t))
 
 ;;set priority range from A to C with default A
 (setq org-highest-priority ?A)
@@ -100,15 +109,11 @@
 		 :prepend t        ; properties
 		 :empty-lines 1    ; properties
 		 :created t        ; properties
-		 )
-
-
-		))
+		)))
 
 (add-hook 'org-mode-hook
           (lambda ()
             (org-indent-mode t)
-            (add-to-list 'org-tag-alist '("TOC" . ?T))
             (visual-line-mode t)
             (wc-mode t)
             )
@@ -219,7 +224,7 @@ of change will be 23:59 on that day"
 
 ;; Mobile Org Setup
 (setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
-(setq org-directory "~/Dropbox/org")
+(setq org-directory org-root-directory)
 (setq org-mobile-inbox-for-pull org-wunderlist-flagged-file-path)
 (setq org-mobile-use-encryption t)
 (setq org-mobile-encryption-password "qX4yb12TKykaWx2P")
