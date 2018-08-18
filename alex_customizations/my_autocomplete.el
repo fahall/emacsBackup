@@ -82,3 +82,5 @@
 (add-hook 'after-init-hook #'company-statistics-mode)
 
 
+(with-eval-after-load 'rust-mode
+  (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))

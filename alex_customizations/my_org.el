@@ -30,7 +30,7 @@
 ;;Define Default Workflow States
 
 (setq org-todo-keywords
-  '((sequence "TODO(t)" "WAIT(w@/!)" "|" "DONE(d!)" "CANCELED(c@)")))
+	  '((sequence "IDEA(i)" "TODO(t)" "WAIT(w@/!)" "REVIEW (r@/!)" "|" "DONE(d!)" "CANCELED(c@)")))
 
 
 (defun org-archive-done-tasks ()
@@ -39,7 +39,11 @@
    (lambda ()
      (org-archive-subtree)
      (setq org-map-continue-from (outline-previous-heading)))
-   "/[DONE|CANCELED]" 'agenda))
+   "/DONE|CANCELED" 'agenda))
+
+
+;; Archive done tasks when refreshing agenda
+(advice-add #'org-agenda-redo :before #'org-archive-done-tasks)
 
 
 ;; set key for agenda

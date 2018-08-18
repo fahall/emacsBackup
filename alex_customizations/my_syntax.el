@@ -114,3 +114,7 @@
 
 (autoload 'docker-compose-mode "docker-compose-mode")
 (add-to-list 'auto-mode-alist '("\\compose.yaml\\'" . docker-compose-mode))
+
+;; Tries to keep code properly indented at all times. 
+(global-aggressive-indent-mode 1)
+(add-to-list 'aggressive-indent-excluded-modes 'html-mode)
