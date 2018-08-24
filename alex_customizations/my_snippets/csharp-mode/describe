@@ -1,0 +1,25 @@
+# key: describe
+# name: nSpec test
+# --
+
+using NSpec;
+using FluentAssertions;
+
+class describe_$1System : EntitasTests {
+    void when_executing() {
+
+        GameEntity e = null;
+
+        before = () => {
+            setup();
+            var system = new $1System(_contexts);
+            _systems.Add(system);
+            e = _contexts.game.CreateEntity();
+        };
+
+        
+        it["$2"] = () => {
+		    $0
+        };
+    }
+}

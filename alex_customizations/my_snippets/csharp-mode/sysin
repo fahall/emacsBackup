@@ -1,0 +1,18 @@
+# name: InitializeSystem
+# key: sysin
+# --
+using Entitas;
+
+public class $1System : IInitializeSystem {
+    /// <summary>
+    ///   $2
+    /// </summary>
+
+    public $1System(Contexts contexts) {
+        $0
+    }
+
+    public void Initialize() {
+	
+    }
+}

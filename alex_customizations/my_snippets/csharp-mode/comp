@@ -1,0 +1,17 @@
+# name: Entitas Component
+# key: comp
+# --
+
+using Entitas;
+using Entitas.CodeGeneration.Attributes;
+
+
+
+[$1]
+public sealed class $2Component : IComponent {
+    /// <summary>
+    ///  $3
+    /// </summary>
+
+    $0
+}

@@ -1,0 +1,30 @@
+# name: ReactiveSystem
+# key: sysre
+# --
+
+using System.Collections.Generic;
+using Entitas;
+
+public class $1System : ReactiveSystem<${2:Game}Entity> {
+
+    /// <summary>
+    ///   $3
+    /// </summary>
+
+    public $1System(Contexts contexts) : base(contexts.${2:$(downcase yas-text)}) {
+    }
+
+    protected override ICollector<$2Entity> GetTrigger(IContext<$2Entity> context) { 
+       return context.CreateCollector($2Matcher.$4);
+    }
+
+    protected override bool Filter($2Entity entity) {
+        return $5
+    }
+
+    protected override void Execute(List<$2Entity> entities) {
+        foreach ($2Entity e in entities) {
+            $0
+        }
+    }
+}

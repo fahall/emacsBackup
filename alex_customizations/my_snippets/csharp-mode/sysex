@@ -1,0 +1,28 @@
+# name : Entitas ExecuteSystem
+# key: sysex
+# --
+
+using Entitas;
+
+public class $1System : IExecuteSystem {
+    /// <summary>
+    ///  $2
+    /// </summary>
+    
+    readonly IGroup<$3Entity> _relevantEntities;
+
+    public $1System(Contexts contexts) {
+        _relevantEntities = contexts.${3:$(downcase yas-text)}.GetGroup($3Matcher.$4);
+    }
+    
+    public void Execute() {
+        foreach ($3Entity e in _relevantEntities.GetEntities()) {
+		    $0
+        }
+    }
+}
+
+
+
+
+
