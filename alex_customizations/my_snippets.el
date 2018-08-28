@@ -18,4 +18,7 @@
 ;;(add-hook 'buffer-list-update-hook 'my-yas-update-hook)
 
 ;; (advice-add #'select-window :after #'yas-describe-tables)
+(yas-reload-all)
 (provide 'my_snippets)
+
+
