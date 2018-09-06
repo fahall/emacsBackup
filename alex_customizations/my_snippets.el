@@ -2,7 +2,7 @@
   :ensure t
   :config(use-package yasnippet-snippets
 		   :ensure t)
-  (yas-reload-all))
+  )
 
 (setq yas-snippet-dirs (append yas-snippet-dirs
                                '("~/emacsBackup/alex_customizations/my_snippets")))
@@ -13,11 +13,13 @@
 
 
 ;; Update yasnippet buffer on change window
-;;(defun my-yas-update-hook () "Update yas tables"
-;;   (yas-describe-tables))
-;;(add-hook 'buffer-list-update-hook 'my-yas-update-hook)
+(defun my-yas-update-hook ()
+  "Update yas tables"
+  (let ((buffer-list-update-hook
+         (remq 'my-yas-update-hook buffer-list-update-hook)))
+    (yas-describe-tables)))
+(add-hook 'buffer-list-update-hook 'my-yas-update-hook)
 
-;; (advice-add #'select-window :after #'yas-describe-tables)
 (yas-reload-all)
 (provide 'my_snippets)
 

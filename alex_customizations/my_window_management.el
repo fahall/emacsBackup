@@ -10,7 +10,7 @@
   (interactive)
   (split-window-horizontally)
   (balance-windows)
-)
+  )
 (defun split-window-vertically-balanced ()
   (interactive)
   (split-window-vertically)
@@ -19,4 +19,6 @@
 (global-set-key (kbd "C-c 2") 'split-window-vertically-balanced)
 (global-set-key (kbd "C-c 3") 'split-window-horizontally-balanced)
 
-
+;; Winner mode allows reverting and restoring windows configurations with `C-c left' and `C-c right'
+(when (fboundp 'winner-mode)
+  (winner-mode 1))
