@@ -28,7 +28,7 @@
 
   (setq indent-tabs-mode nil)
   (setq c-syntactic-indentation t)
-  (c-set-style "k&r")
+  (c-set-style "stroustrup")
   (setq c-basic-offset 4)
   (setq truncate-lines t)
   (setq tab-width 4)
