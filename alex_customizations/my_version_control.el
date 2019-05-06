@@ -1,3 +1,7 @@
+;; Add paths to check for git binary
+(add-to-list 'exec-path "c:/apps/git/cmd/")
+
+
 ;;Store all backup files in C:/Temp
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))

@@ -34,16 +34,17 @@
   (setq tab-width 4)
   (setq evil-shift-width 4)
 
-  ;csharp-mode README.md recommends this too
-  ;(electric-pair-mode 1)       ;; Emacs 24
+										;csharp-mode README.md recommends this too
+										;(electric-pair-mode 1)       ;; Emacs 24
   (electric-pair-local-mode 1) ;; Emacs 25
   (local-set-key (kbd "C-c r r") 'omnisharp-run-code-action-refactoring)
+  (local-set-key (kbd "C-c r n") 'omnisharp-rename)
   (local-set-key (kbd "C-c C-c") 'recompile)
   (setq-local 'omnisharp-format-on-keystroke t)
   )
 
 
-  (add-hook 'csharp-mode-hook 'my-csharp-mode-setup t)
+(add-hook 'csharp-mode-hook 'my-csharp-mode-setup t)
 
 (add-hook 'python-mode-hook 'my/python-mode-hook)
 (add-hook 'csharp-mode-hook 'omnisharp-mode)
