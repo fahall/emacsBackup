@@ -12,7 +12,7 @@ Place a softlink to ~/emacsBackup/.emacs into $HOME
 
 e.g.
 
-ln -s ~/emacsBakup/.emacs ~/.emacs
+ln -s ~/emacsBackup/.emacs ~/.emacs
 
 
 
