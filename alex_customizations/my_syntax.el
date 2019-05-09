@@ -118,3 +118,7 @@
 ;; Tries to keep code properly indented at all times. 
 (global-aggressive-indent-mode 1)
 (add-to-list 'aggressive-indent-excluded-modes 'html-mode)
+
+(setq web-mode-engines-alist
+	  '(("php", "\\.phtml\\'")
+		("jinja", "\\.djhtml\\")))
