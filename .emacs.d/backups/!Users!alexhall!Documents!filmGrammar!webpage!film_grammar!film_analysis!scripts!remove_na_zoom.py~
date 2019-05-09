@@ -1,0 +1,12 @@
+from film-analysis.models import *
+from film_analysis.classification_factories import *
+from film_analysis.model_classification import *
+from film_analysis.model_factories import *
+
+
+def get_na_classifications():
+
+    classes = Classification.objects.all()
+    na_classes = []
+    for c in classes:
+        if class

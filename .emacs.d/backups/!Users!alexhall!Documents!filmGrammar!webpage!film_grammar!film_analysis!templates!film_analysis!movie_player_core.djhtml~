@@ -1,0 +1,16 @@
+<div class="panel-primary panel movie">
+  <div class="panel-heading">
+	Video
+  </div>
+  <div class="panel-body">
+	
+	<video width="320" height="240" controls>
+	  {% block video_source %}
+	  {% endblock video_source %}
+	</video>
+  </div>
+</div>
+  
+  
+  
+  
