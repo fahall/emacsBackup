@@ -39,6 +39,9 @@
   (electric-pair-local-mode 1) ;; Emacs 25
   (local-set-key (kbd "C-c r r") 'omnisharp-run-code-action-refactoring)
   (local-set-key (kbd "C-c r n") 'omnisharp-rename)
+  (local-set-key (kbd "C-c C-f") 'omnisharp-find-implementations)
+  (local-set-key (kbd "C-c f") 'omnisharp-find-usages)
+  (local-set-key (kbd "C-c r n") 'omnisharp-rename)
   (local-set-key (kbd "C-c C-c") 'recompile)
   (setq-local 'omnisharp-format-on-keystroke t)
   )
